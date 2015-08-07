@@ -2,9 +2,32 @@
 ================================================================================
 WSP COMPONENT LIBRARY STYLESHEET
 ================================================================================ */
+body{
+background-image: url("../images/paisley.png");
+}
 
+#container{
+background: #c4c4c4;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+#logo{
+    float: left
+}
+h1{
+   margin: 60px 0;
+}
+h2{
+margin: 20px;
+}
 
+p{
+width: 400px;
+text-align: justify;
+    margin: 20px;
+}
 /* HEADER SPECIFIC ======================================== */
 
 /* ABOUT SPECIFIC ======================================== */
