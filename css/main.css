@@ -6,40 +6,49 @@ body{
 background-image: url("../images/paisley.png");
 font-family: 'Crimson Text', serif;
 text-align: center;
-    font-size: 2em;
+font-size: 16px;
+width:100%;
 }
 
 #container{
 background: rgba(196, 196, 196, 0.5);
-width: 1280px;
+width: 80em;
 margin: 0 auto;
-padding: 20px;
+padding: 1.250em;
 }
 
+/* HEADER SPECIFIC ======================================== */
 #logo{
 float: left;
 }
+
+/* ABOUT SPECIFIC ======================================== */
 h1{
 float: right;
-font-size: 1.5em;
+font-size: 3em;
 color: #d91b5c;
-}
-h2{
-margin: 10px;
-color: #c30546;
 }
 
 #aboutMe{
-text-align: justify;
 font-weight: bold;
-margin: 0 auto;
+}
+
+/* COMPONENTS SPECIFIC ======================================== */
+h2{
+margin: 10px;
+color: #c30546;
+font-size: 2.5em;
+}
+
+h3{
+font-size: 2em;
 }
 
 p{
+font-size: 1.5em;
 text-align: justify;
 }
-/* HEADER SPECIFIC ======================================== */
 
-/* ABOUT SPECIFIC ======================================== */
 
-/* COMPONENTS SPECIFIC ======================================== */
+
+
