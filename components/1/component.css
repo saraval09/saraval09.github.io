@@ -4,5 +4,38 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+body{
+    background-image: url("component.jpg");
+    background-repeat: no-repeat;
+    font-family: Arial;
+
+}
+
+strong{
+    font-size: 5em;
+}
+h1 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+}
+h1:before, h1:after {
+    position: absolute;
+    top: 90%;
+    overflow: hidden;
+    width: 45%;
+    height: 1px;
+    content: '\a0';
+    background-color: #ffffff;
+}
+h1:before {
+    margin-left: -50%;
+    text-align: center;
+}
+
+
 
 /* HEADER ======================================== */

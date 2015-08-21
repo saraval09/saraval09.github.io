@@ -17,6 +17,10 @@ margin: 0 auto;
 padding: 1.250em;
 }
 
+img{
+    max-width: 100%;
+}
+
 /* HEADER SPECIFIC ======================================== */
 #logo{
 float: left;
