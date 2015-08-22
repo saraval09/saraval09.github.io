@@ -4,5 +4,49 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+section{
+    background-color: #e8d6b4;
+    width: 960px;
+    padding: 20px;
+}
+article{
+    width: 300px;
+    height: 100px;
+    background-color: #c7b195;
+    text-align: left;
+    margin: 10px;
+    border: solid 1px #000000;
 
+
+}
+
+h2{
+    text-transform: uppercase;
+    color: #525252;
+
+}
+
+h3{
+    color: #b8553a;
+}
+
+h3, a, address{
+    padding: 5px;
+    font-size: .8em;
+}
+
+a{
+    display: block;
+}
+
+input{
+    width: 32%;
+    height: 20px;
+    margin: 10px 0;
+}
+
+textarea{
+    width: 100%;
+    height: 300px;
+}
 /* HEADER ======================================== */

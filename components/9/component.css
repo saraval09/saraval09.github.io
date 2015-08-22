@@ -5,4 +5,25 @@ COMPONENT STYLESHEET
 
 /* HEADER ======================================== */
 
+section{
+    width: 650px;
+    text-align: center;
+}
+blockquote{
+    border-top: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+    font-size: 2em;
+    color: #585755 ;
+    padding: 10px;
+}
+
+article{
+    color: #959595;
+}
+
+h2{
+    font-size: 1em;
+    color: #3f3f3f;
+}
+
 /* HEADER ======================================== */

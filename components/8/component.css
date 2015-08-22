@@ -5,4 +5,55 @@ COMPONENT STYLESHEET
 
 /* HEADER ======================================== */
 
+section{
+    width: 100%;
+}
+i
+{
+    border-radius: 100px;
+    border:solid 1px #debc39;
+    background-color: #debc39;
+    color: #ffffff;
+    padding: 30px;
+    margin: 20px;
+    float: left;
+
+
+}
+
+button{
+    border-radius: 10px;
+    border:solid 1px #e4e4e4;
+    background-color: #ffffff;
+    width: 500px;
+
+
+}
+
+img{
+    float: left;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+strong{
+    font-size: 2em;
+    color: #929292;
+}
+
+h1{
+    color: #debc39;
+    font-size: 3em;
+    margin: 0 100px;
+}
+
+p{
+
+    font-size: 3em;
+    float: right;
+    color: #929292;
+
+}
 /* HEADER ======================================== */
