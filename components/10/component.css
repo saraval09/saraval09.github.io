@@ -6,7 +6,7 @@ COMPONENT STYLESHEET
 /* HEADER ======================================== */
 section{
     background-color: #e8d6b4;
-    width: 960px;
+    width: 980px;
     padding: 20px;
 }
 article{
@@ -15,10 +15,9 @@ article{
     background-color: #c7b195;
     text-align: left;
     margin: 10px;
-    border: solid 1px #000000;
-
-
+    display: inline-block;
 }
+
 
 h2{
     text-transform: uppercase;
