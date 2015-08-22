@@ -4,5 +4,14 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+a.img {
+    margin: 5px;
+    padding: 5px;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
 
 /* HEADER ======================================== */
