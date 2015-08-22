@@ -4,5 +4,61 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+article{
+    width: 400px;
+    border: solid 1px #cccccc;
+    font-family: Arial;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    color: #373737;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+
+}
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    color: #b5b3b7;
+    margin: 0 0 20px 0;
+    letter-spacing: -2px;
+}
+
+p{
+    text-transform: uppercase;
+    color: #b5b3b7;
+    margin: 20px;
+
+
+}
+
+input{
+    width: 80%;
+    padding: 20px;
+    margin: 5px 20px;
+    border: solid 1px #cccccc;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+#submit{
+    background-color: #f25718;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 1.5em;
+    border: solid 1px #f25718;
+    width: 90%;
+    font-weight: bold;
+    margin-top: 20px;
+
+
+
+
+}
 
 /* HEADER ======================================== */

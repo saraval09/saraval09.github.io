@@ -4,5 +4,31 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+i
+{
+    border-radius: 100px;
+    border:solid 1px #e4e4e4;
+    color: #1bbae6;
+    padding: 30px;
+    margin: 0 auto;
+}
 
+article{
+    width: 120px;
+    display: inline-block;
+    margin: 30px;
+
+}
+
+h2{
+    font-size: 1.2em;
+    text-align: center;
+    color: #585755;
+}
+
+p{
+    font-size: .8em;
+    color: #b1b1b1;
+    text-align: center;
+}
 /* HEADER ======================================== */
