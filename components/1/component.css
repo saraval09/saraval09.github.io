@@ -5,14 +5,19 @@ COMPONENT STYLESHEET
 
 /* HEADER ======================================== */
 body{
-    background-image: url("component.jpg");
-    background-repeat: no-repeat;
-    font-family: Arial;
 
+    font-family: Arial;
+}
+
+header{
+    background-image: url("component.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 strong{
     font-size: 5em;
+    display: block;
 }
 h1 {
     position: relative;
@@ -26,7 +31,7 @@ h1:before, h1:after {
     position: absolute;
     top: 90%;
     overflow: hidden;
-    width: 45%;
+    width: 40%;
     height: 1px;
     content: '\a0';
     background-color: #ffffff;

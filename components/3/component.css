@@ -45,7 +45,7 @@ input{
     text-transform: uppercase;
     font-size: 1em;
 }
-#submit{
+input:last-of-type{
     background-color: #f25718;
     color: #ffffff;
     text-transform: uppercase;

@@ -31,7 +31,7 @@ h3, p{
     font-size: .8em;
 }
 
-.para{
+p:last-of-type{
     padding: 10px;
 }
 
