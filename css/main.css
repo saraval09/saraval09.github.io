@@ -10,7 +10,7 @@ font-size: 16px;
 width:100%;
 }
 
-#container{
+main{
 background: rgba(196, 196, 196, 0.5);
 max-width: 80em;
 margin: 0 auto;
@@ -34,7 +34,7 @@ color: #d91b5c;
 }
 
 
-#aboutMe{
+p:first-of-type{
 font-weight: bold;
 }
 

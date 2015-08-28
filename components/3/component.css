@@ -7,16 +7,18 @@ COMPONENT STYLESHEET
 article{
     width: 400px;
     border: solid 1px #cccccc;
-    font-family: Arial;
+    font-family: "Arial", Times, serif;
 }
 
 h1{
     text-transform: uppercase;
     text-align: center;
     font-size: 2em;
-    color: #373737;
+    color: #525252;
     margin: 20px 0 0 0;
     font-weight: bold;
+    letter-spacing: -2px;
+
 
 }
 
@@ -26,6 +28,7 @@ h2{
     color: #b5b3b7;
     margin: 0 0 20px 0;
     letter-spacing: -2px;
+    font-weight: 100;
 }
 
 p{

@@ -22,17 +22,19 @@ img{
 }
 
 article{
-    margin: 20px;
-    padding: 10px;
+    margin: 8px;
+    padding: 2px;
 }
 
 
 h3, p{
     font-size: .8em;
+    font-weight: 100;
 }
 
 p:last-of-type{
     padding: 10px;
+    line-height: 200%;
 }
 
 

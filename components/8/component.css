@@ -41,12 +41,14 @@ img{
 strong{
     font-size: 2em;
     color: #929292;
+    font-weight: 100;
 }
 
 h1{
     color: #debc39;
     font-size: 3em;
     margin: 0 100px;
+    font-weight: 100;
 }
 
 p{
