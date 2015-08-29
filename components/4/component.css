@@ -4,6 +4,15 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+body{
+    font-family: 'open sans',arial,sans-serif;
+}
 i
 {
     border-radius: 100px;
@@ -21,15 +30,17 @@ article{
 }
 
 h2{
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     color: #585755;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 p{
-    font-size: .8em;
+    font-size: .6em;
     color: #b1b1b1;
     text-align: center;
+    line-height: 180%;
+    font-weight: 400;
 }
 /* HEADER ======================================== */

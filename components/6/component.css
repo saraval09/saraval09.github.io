@@ -4,6 +4,18 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+body{
+    color: #4b4b4b;
+    font-family: 'open sans',arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
 a{
     margin: 5px;
     padding: 5px;

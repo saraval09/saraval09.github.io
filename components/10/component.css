@@ -4,24 +4,36 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
 section{
     background-color: #e8d6b4;
     width: 980px;
     padding: 20px;
+    font-family: 'open sans',arial,sans-serif;
 }
+
+
 article{
-    width: 300px;
-    height: 100px;
+    width: 31%;
     background-color: #c7b195;
     text-align: left;
-    margin: 10px;
     display: inline-block;
+    margin: 5px;
+
+
+
 }
 
 
 h2{
     text-transform: uppercase;
     color: #525252;
+    margin-top: 80px;
 
 }
 
@@ -29,13 +41,18 @@ h3{
     color: #b8553a;
 }
 
-h3, a, address{
-    padding: 5px;
+h3, address{
+    padding: 5px 10px;
     font-size: .8em;
+
 }
 
 a{
     display: block;
+    font-size: .8em;
+    padding: 0 5px 5px 5px;
+
+
 }
 
 input{

@@ -4,8 +4,15 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
 footer{
-color: #929292;
+    color: #929292;
+    font-family: 'open sans',arial,sans-serif;
 
 }
 
@@ -14,16 +21,24 @@ ul{
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+    display: inline-block;
+    line-height: 300%;
+    text-transform: uppercase;
+    font-size: .8em;
+    margin: 20px 10px  0 180px;
+    font-weight: 300;
+
+
 }
 
-ul li{
-    display: inline-block;
-}
 
 ul li:before{
     content: "\00BB \0020";
 }
-img{
+section{
     float: left;
+    margin: 20px;
+    font-size: .8em;
+    font-weight: 300;
 }
 /* HEADER ======================================== */

@@ -5,25 +5,32 @@ COMPONENT STYLESHEET
 
 /* HEADER ======================================== */
 
-section{
-    width: 650px;
+section, figure{
+    width: 750px;
     text-align: center;
+    margin: 20px;
 }
 blockquote{
     border-top: solid 1px #cccccc;
     border-bottom: solid 1px #cccccc;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #585755 ;
     padding: 10px;
+    width: 50%;
+    margin:0 auto;
+
 }
 
 article{
     color: #959595;
+    margin: 10px auto;
+    width:80%;
 }
 
 h2{
     font-size: 1em;
     color: #3f3f3f;
 }
+
 
 /* HEADER ======================================== */
