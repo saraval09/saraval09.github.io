@@ -1,178 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>WSP: Sara Maneval</title>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Crimson+Text">
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Eric Val</title>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
 </head>
 <body>
-<main>
-    <!-- Header -->
-    <header>
-        <h1>Web Standards Project</h1>
-        <img src="images/logo.png" width="389" height="150" alt="logo" id="logo">
-    </header>
-    <!-- About -->
+<header class="clearfix">
+    <h1><strong>Eric</strong></h1>
+    <h1 id="val">Val</h1>
+    <h2 id="official">Official Website</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bio.html">Bio</a></li>
+            <li><a href="images.html">Images</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main >
     <section>
-    <a href="images/me.jpg">
-        <img src="images/me.jpg" width="391" height="538" alt="Me">
-    </a>
+        <section id="shows">
+            <h2>Upcoming Shows:</h2>
+            <ul>
+                <li><strong>The Spartan Pub</strong> 11/7/2015</li>
+                <li><strong>Riepstine's Pub</strong> 11/21/2015</li>
+                <li><strong>Hull's Landing</strong> 12/4/2015</li>
+                <li><strong>The Mill Tavern Bar & Restaurant</strong> 12/12/2015</li>
+            </ul>
+        </section>
+        <h2>Map To The Shows</h2>
+        <div class="map_container">
+            <!-- Dots -->
+            <a class="dot" style="top:107px;  left:420px;" cities="hughesville"></a>
+            <a class="dot" style="top:110px;  left:380px;" cities="williamsport"></a>
+            <a class="dot" style="top:118px;  left:417px;" cities="muncy" ></a>
+            <a class="dot" style="top:110px;  left:400px;" cities="montoursville"></a>
+            <form id="mapForm" name="mapForm" class="form_cities" method="post" action="">
+                <select name="cities" id="cities">
+                    <option value="hughesville">Hughesville</option>
+                    <option value="williamsport">Williamsport</option>
+                    <option value="muncy">Muncy</option>
+                    <option value="montoursville">Montoursville</option>
+                    <option value="ALL" selected="selected">Show all cities</option>
+                </select>
+            </form>
+            <div class="detail_container">
+                <!-- City -->
+                <div class="city_detail">
+                    <h3>Choose a city</h3>
+                </div>
+            </div>
+        </div>
+        <div class="city_detail_container">
+            <!-- City -->
+            <div class="city_detail" id="hughesville">
+                <img class="city_photo" src="img/spartan.jpeg" alt="hughesville" width="75" height="75" />
+                <div class="city_info">
+                    <h2>The Spartan Pub</h2>
+                    <address>104 N Main St, Hughesville, PA 17737</address>
+                </div>
+            </div>
+            <!-- City -->
+            <div class="city_detail" id="williamsport">
+                <img class="city_photo" src="img/riepstine.jpg" alt="williamsport" width="75" height="75" />
+                <div class="city_info">
+                    <h2>Riepstine's Pub</h2>
+                    <address>913 Arch St, Williamsport, PA 17701</address>
+                </div>
+                <!-- City -->
+                <div class="city_detail" id="muncy">
+                    <img class="city_photo" src="img/hulls.jpg" alt="muncy" width="75" height="75" />
+                    <div class="city_info">
+                        <h2>Hull's Landing</h2>
+                        <address>27 PA-442, Muncy, PA 17756</address>
+                    </div>
+                </div>
+                <!-- City -->
+                <div class="city_detail" id="montoursville">
+                    <img class="city_photo" src="img/mill.jpg" alt="montoursville" width="75" height="75" />
+                    <div class="city_info">
+                        <h2>The Mill Tavern Bar & Restaurant</h2>
+                        <address>319 Broad St, Montoursville, PA 17754</address>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section>
-        <h2>About Me!</h2>
-        <p>
-            Hello everyone! My name is Sara Maneval. I am a 3D artist for a company in Tampa, Florida currently. I have a Bachelors Degree in Computer Animation graduating from Full Sail in 2012. I was born in Pennsylvania and raised in Montana.<br>
-            I have loved Disney movies since I was a year old, for an hour at a time they helped me escape reality. As I got older I grew to love everything about computers as well. During my junior year in high school I was told that I needed to decide on what I should do with my life. It was then I decided to put my two passions together and make my life goal to work at Disney.<br> I went to two different colleges until I found Full Sail. I was hooked on the college campus life. I made plenty of friends that I still keep in contact with them and I am trying to get them a job where I am at as well! Everyone asks me why I haven't applied for Disney yet and my answer is simple, I am not ready to get to my life goal just yet. I want to experience different studios before I get my dream job. I also figured having two degrees when I graduate in a year and half with my second Bachelors Degree in Web Design and Development, it will increase my chances of working at other various studios. So ask me where I am at in about 10 years because maybe by then I will be in the studio for Disney or Pixar making the next big movie.
-        </p>
+    <section id="updates">
+        <h2>Updates:</h2>
+        <ul>
+            <li>New single <i>Beautiful Lie</i> is out now!</li>
+            <li>Check out the new music video below! </li>
+            <li>Stay Updated on Eric's YouTube Channel!</li>
+        </ul>
+        <a href="https://www.youtube.com/user/EricValMusic">Click
+            Here For Eric's YouTube Channel!</a>
     </section>
-    <!-- Header -->
-        <section>
-            <h2>Header</h2>
-            <img src="images/header.PNG"  alt="header">
-            <h3>Target Audience:</h3>
-            <p>Designed for people who own a house and would like a custom garden pond. The target audience would be adults approximately between the ages of 25 and 65. A custom garden pond design would indicate that the                        the consumer would be middle to upper class.</p>
-            <h3>Client/User Needs:</h3>
-            <p>The client goal is revenue. They show images of ponds they created in hope to be hired by the user. The users needs are to find a client that can create a custom garden pond right in their own back yard and be affordable at the same time.</p>
-            <h3>Design Critique:</h3>
-            <p>When looking at the picture you see a relaxing, welcoming image. The word 'Laguna' catches your eye with the larger font, it is simple yet effective. The words 'garden pond design' is in between two                        lines which gives it a nice balance throughout the picture. </p>
-            <button><a href="components/1/component.html" style="text-decoration:none">Header</a></button>
-        </section>
-
-    <!-- Nav Bar -->
-        <section>
-            <h2>Navigation Bar</h2>
-            <img src="images/nav.PNG"  alt="nav">
-            <h3>Target Audience:</h3>
-            <p>Designed for a younger 'hip' crowd who is into films. The target audience would be younger adults approximately between the ages of 18 and 35. They like quick answers, therefore the navigation bar needs to be simple and to the point. </p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is community outreach. They want to inform the user of their work and how to contact them. The user is wanting to know more about the client on a personal level and visited the site in hopes to do so.</p>
-            <h3>Design Critique:</h3>
-            <p>The first thing you notice is the logo on the left hand side with an elegant font and a subtle change in color. The way the lines are setup for the navigation bar gives the appearance that they are                          buttons even though the lines don’t connect your eyes still connect them anyways. </p>
-            <button><a href="components/2/component.html" style="text-decoration:none">Nav Bar</a></button>
-        </section>
-
-    <!-- Login Form -->
-        <section>
-            <h2>Login Form</h2>
-            <img src="images/login.PNG"  alt="login">
-            <h3>Target Audience:</h3>
-            <p> Designed for adults who are interested in a good bargain. The target audience would be adults approximately between the ages of 18 and 65. If the adult is planning on staying at a hotel, they are probably middle to upper class, but at the same time need to save money when they can so they can spend the rest on their vacation.</p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is customer service. They want to get the user to sign up for their offer. The user is looking for great deals for their next hotel stay, but doesnt want to spend too much money.They are always checking their email to see if there are any bargains sent to them.</p>
-            <h3>Design Critique:</h3>
-            <p>The design is simple yet effective. The header is stating exactly what you are signing up for the larger bold font. With the text in the input boxes, it makes things easier for the user to know what to                      expect when they press the big orange button after they are filled in.</p>
-            <button><a href="components/3/component.html" style="text-decoration:none">Login Form</a></button>
-        </section>
-
-    <!-- Features -->
-        <section>
-            <h2>Features</h2>
-            <img src="images/features.PNG"  alt="features">
-            <h3>Target Audience:</h3>
-            <p>The target audience would be for younger adults approximately between the ages of 21 and 35. Younger adults tend to know what they want when they are on websites, so the features need to quick and to the point.</p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is customer service. They are showing the users what they can expect from them as a company with icons and a brief description below. The user want to be able to easily look at these features and either look at the larger icons and know what is going on or they can read all about it. </p>
-            <h3>Design Critique:</h3>
-            <p>The design is nice and simple with a light circle around each blue icon. A header below with a brief description on each of them indicating what the feature is useful in case the user isn’t sure what the icon means. </p>
-            <button><a href="components/4/component.html" style="text-decoration:none">Features</a></button>
-        </section>
-
-    <!-- Services -->
-        <section>
-            <h2>Services</h2>
-            <img src="images/services.PNG"  alt="services">
-            <h3>Target Audience:</h3>
-            <p>Designed for adults who are interested in fashion and photography. The target audience would be for younger adults approximately between the ages of 21 and 35. For a younger crowd that is into fashion, the main services needs to look glamorous for them to stay interested. </p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is revenue. They want to show their portfolio to the users who are interested in a photo shoot. The users want to look good in a photo for either a modeling career or possibly just for a keepsake. Looking at the services is their deal breaker on whether they will continue looking at the site or not.</p>
-            <h3>Design Critique:</h3>
-            <p>First thing you see is the bottom of a ladies head with bright red lipstick on the left side. There are feathers coming out from the top indicating she is wearing a head piece of some kind. It is an                         effective way to get the attention of the target audience. Even though your eyes are drawn to her you quickly look to the right to notice what they have to offer for their main services. The two thumbnails give a great representation of what they offer. </p>
-            <button><a href="components/5/component.html" style="text-decoration:none">Services</a></button>
-        </section>
-
-    <!-- Image Gallery -->
-        <section>
-            <h2>Image Gallery</h2>
-            <img src="images/gallery.PNG"  alt="gallery">
-            <h3>Target Audience:</h3>
-            <p>The target audience would be for younger couples approximately between the ages of 20 and 36. The couples looking for a wedding venue would most likely be middle to upper class. The images need to be as elegant as possible to persuade them to go with the service.</p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goals is revenue. They are showing young couples all the places they can go to have their dream wedding. The user needs to find their wedding venue that will provide more than just a location. They want it to be elegant, memorable, and affordable.</p>
-            <h3>Design Critique:</h3>
-            <p> Each thumbnail has an HD image of what couples could expect their wedding to look like. With a brief description below each picture, it gives the audience a great idea of what they can look forward to. Below the description is an elegant design to help separate the images better.</p>
-            <button><a href="components/6/component.html" style="text-decoration:none">Gallery</a></button>
-        </section>
-
-    <!-- Blog -->
-        <section>
-            <h2>Blog</h2>
-            <img src="images/blog.PNG"  alt="blog">
-            <h3>Target Audience:</h3>
-            <p>Given that it is a blog, the target audience would be for a younger crowd approximately between the ages of 14 and 28. It is important to keep the website organized and well laid out in order for the younger crowd to stay interested. </p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is community outreach. They write about anything they want on their blog to express themselves. The user will read the blogs to either get insight on the subject or express their opinions on it.</p>
-            <h3>Design Critique:</h3>
-            <p>The dark background with a light font makes it very easy to read and understand. Having a profile picture on the left side the name makes it easier to know who the person writing is since we typically read left to right.</p>
-            <button><a href="components/7/component.html" style="text-decoration:none">Blog</a></button>
-        </section>
-
-    <!-- CTA -->
-        <section>
-            <h2>CTA</h2>
-            <img src="images/cta.PNG"  alt="cta">
-            <h3>Target Audience:</h3>
-            <p>The target audience would be for adults approximately between the ages of 18 and 55.Because older people are now making purchases online, it is best to make the font larger then normal. </p>
-            <h3>Client/User Needs:</h3>
-            <p> The clients goal is revenue. The want the user to book and pay online or have the user make an enquiry. The user wants to be able to schedule and pay for a service online without any hassle.</p>
-            <h3>Design Critique:</h3>
-            <p>The icons really help balance the CTA as a whole. Most people know what those stand for so they don’t really need to focus on the words. Having them yellow really helps the user to know where to look.The arrows pointing to the right help the user know that it is a button along with the rounded edges</p>
-            <button><a href="components/8/component.html" style="text-decoration:none">CTA</a></button>
-        </section>
-
-    <!-- About Us -->
-        <section>
-            <h2>About Us</h2>
-            <img src="images/about.PNG"  alt="about">
-            <h3>Target Audience:</h3>
-            <p>The target audience would be for younger adults approximately between the ages of 21 and 35. The younger crowd is looking to learn more about the company and what the company can provide for them. </p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is community outreach. They want to inform the user about their company. The user would like to get to know the company on a more personal level by reading about them.</p>
-            <h3>Design Critique:</h3>
-            <p>The images running horizontal on the bottom is a great way to look at the clients. They arent all dressed the same indicating the company is for younger crowds and not for CEOs. I believe the “about us” header could be a little bigger to make it stand out more. </p>
-            <button><a href="components/9/component.html" style="text-decoration:none">About Us</a></button>
-        </section>
-
-    <!-- Contact Form -->
-        <section>
-            <h2>Contact Form</h2>
-            <img src="images/contact.PNG"  alt="contact">
-            <h3>Target Audience:</h3>
-            <p>The target audience would be for adults approximately between the ages of 18 and 45. People dont like spending a lot of time filling out forms. Keeping the form straight to the point and with very few input boxes is best.</p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is customer service. They want to get the user to contact them with any comments or problems. The user would like to send an easy form to the company without too much personal information.</p>
-            <h3>Design Critique:</h3>
-            <p>The color and font of the addresses and phone number makes it a little hard to read on a brown background. The headers for each box shouldn’t be the same size as the content below. The form itself is basic and easy to use. It is spaced properly and easy to read.</p>
-            <button><a href="components/10/component.html" style="text-decoration:none">Contact Form</a></button>
-        </section>
-
-    <!-- Footer -->
-        <section>
-            <h2>Footer</h2>
-            <img src="images/footer.PNG"  alt="footer">
-            <h3>Target Audience:</h3>
-            <p>The target audience would be for a younger crowd that uses social media approximately between the ages of 14 and 35. Social media is an everyday thing to them. </p>
-            <h3>Client/User Needs:</h3>
-            <p>The clients goal is customer outreach. They want to let the user interact with them through social media and have all of the websites main points on the right hand side. The user would like to able to connect with the company through social media since they use it everyday.</p>
-            <h3>Design Critique:</h3>
-            <p>The icon for each social media site indicates that it will be for a younger crowd since all they are using is icons and no text indicating what those icons stand for. The 3 columns to the right, show that there will be listing that couldnt fit in the navigation bar and will help the user navigate even more throughout the website.</p>
-            <button><a href="components/11/component.html" style="text-decoration:none">Footer</a></button>
-        </section>
-    <!-- End of Components -->
-
-    <!-- Footer of Page -->
-    <footer><small>Copyright &copy; 2015 | WSP Sara Maneval</small></footer>
-
-    <!-- End of Container -->
-    </main>
+    <article>
+        <iframe width="640" height="360"
+                src="http://www.youtube.com/embed/SjGZoALjiLQ">
+        </iframe>
+    </article>
+    <footer>
+        <p>Copyright Eric Val &copy; 2015 | Privacy Policy</p>
+        <a href="https://www.facebook.com/eric.val?fref=ts"><img src="img/icon1.png" alt="Facebook"
+                                                                 width="32" height="32"></a>
+        <a href="https://twitter.com/ericvalmusic"> <img src="img/icon2.png" alt="Twitter" width="32"
+                                                         height="32"></a>
+        <a href="https://plus.google.com/+EricVal/posts"><img src="img/icon4.png" alt="Google" width="32"
+                                                              height="32"></a>
+        <a href="https://www.linkedin.com/profile/view?id=AAkAAArC7lcB1ILPnck8ocrItIzIy6Is7EUkXZI&authType=NAME_SEARCH&authToken=gZTw&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A180547159%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1445566846617%2Ctas%3Aeric%20val"><img src="img/icon5.png" alt="LinkedIn" width="32" height="32"></a>
+    </footer>
+</main>
+<!--=== End of Container ===-->
 </body>
 </html>
