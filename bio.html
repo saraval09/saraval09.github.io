@@ -3,12 +3,14 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Eric Val</title>
-    <script type="text/javascript" src="js/modernizr.js"></script>
+    <link href="css/bio.css" rel="stylesheet" type="text/css">
+    <link href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="js/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+    <link href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/bio.js"></script>
+
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href="css/bio.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
 </head>
 <body>
@@ -20,33 +22,29 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="bio.html">Bio</a></li>
-            <li><a href="images.html">Images</a></li>
+            <li>
+                <a href="#">Gallery</a>
+                <ul class="selected" style="list-style-type:none">
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+                <div class="clear"></div>
+            </li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 <main>
     <section>
-        <h2>Biography of Eric Val</h2>
+        <h2 id="bio">Biography of Eric Val</h2>
         <p>Eric Val was born in Lewisburg Pennsylvania, but raised in a small town in Montana. All his life he knew
             he wanted to be a rock star. He was given guitar lessons starting in his early teens and then went on to vocal lessons by the end of high school. After graduation he moved to Pennsylvania to pursue his career with music.
             After 3 years he released his first album <i>3 Year Struggle</i> and continues to strive for the best to this day.
         </p>
     </section>
-    <canvas id="Canvas1" >Your browser does not support canvas</canvas>
-    <video id="vid1" src="video/video.mp4" width="300" height="550" controls></video>
-    <div id="sound">
-        <h2>One of the fans favorite songs!</h2>
-        <h3>Press Play Below To Hear <i>Pull Me Under</i></h3>
-        <audio id="audio" controls>
-            <source src="audio/pull_me_under.mp3" type="audio/mpeg"/>
-            <source src="audio/pull_me_under.ogg" type="audio/ogg"/>
-            Audio Is Not Supported
-        </audio>
-        <button onclick="clicked()">Skip 10 Seconds</button>
-    </div>
+
     <footer>
-        <p>Copyright Eric Val &copy; 2015 | Privacy Policy</p>
+        <p>Copyright Eric Val &copy; 2016 | Privacy Policy</p>
         <a href="https://www.facebook.com/eric.val?fref=ts"><img src="img/icon1.png" alt="Facebook"
                                                                  width="32" height="32"></a>
         <a href="https://twitter.com/ericvalmusic"> <img src="img/icon2.png" alt="Twitter" width="32"
@@ -57,5 +55,12 @@
     </footer>
 </main>
 <!--=== End of Container ===-->
+
+<!--==== Scripts ====-->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/globalize/globalize.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

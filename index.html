@@ -3,6 +3,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Eric Val</title>
+    <link href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="js/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+    <link href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -17,13 +20,35 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="bio.html">Bio</a></li>
-            <li><a href="images.html">Images</a></li>
+            <li>
+                <a href="#">Gallery</a>
+                <ul class="selected" style="list-style-type:none">
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+                <div class="clear"></div>
+            </li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 <main >
-    <section>
+        <section id="updates">
+            <h2>Updates:</h2>
+            <ul>
+                <li>New single <i>Beautiful Lie</i> is out now!</li>
+                <li>Check out the new music video below! </li>
+                <li>Eric will be performing next week!<br> Check out his upcoming shows.</li>
+            </ul>
+            </section>
+        <section id="music">
+            <audio controls>
+                <source src="" type="audio/ogg">
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+        </section>
         <section id="shows">
             <h2>Upcoming Shows:</h2>
             <ul>
@@ -33,81 +58,72 @@
                 <li><strong>The Mill Tavern Bar & Restaurant</strong> 12/12/2015</li>
             </ul>
         </section>
-        <h2>Map To The Shows</h2>
-        <div class="map_container">
-            <!-- Dots -->
-            <a class="dot" style="top:107px;  left:420px;" cities="hughesville"></a>
-            <a class="dot" style="top:110px;  left:380px;" cities="williamsport"></a>
-            <a class="dot" style="top:118px;  left:417px;" cities="muncy" ></a>
-            <a class="dot" style="top:110px;  left:400px;" cities="montoursville"></a>
-            <form id="mapForm" name="mapForm" class="form_cities" method="post" action="">
-                <select name="cities" id="cities">
-                    <option value="hughesville">Hughesville</option>
-                    <option value="williamsport">Williamsport</option>
-                    <option value="muncy">Muncy</option>
-                    <option value="montoursville">Montoursville</option>
-                    <option value="ALL" selected="selected">Show all cities</option>
-                </select>
-            </form>
-            <div class="detail_container">
-                <!-- City -->
-                <div class="city_detail">
-                    <h3>Choose a city</h3>
-                </div>
-            </div>
-        </div>
-        <div class="city_detail_container">
-            <!-- City -->
-            <div class="city_detail" id="hughesville">
-                <img class="city_photo" src="img/spartan.jpeg" alt="hughesville" width="75" height="75" />
-                <div class="city_info">
-                    <h2>The Spartan Pub</h2>
-                    <address>104 N Main St, Hughesville, PA 17737</address>
-                </div>
-            </div>
-            <!-- City -->
-            <div class="city_detail" id="williamsport">
-                <img class="city_photo" src="img/riepstine.jpg" alt="williamsport" width="75" height="75" />
-                <div class="city_info">
-                    <h2>Riepstine's Pub</h2>
-                    <address>913 Arch St, Williamsport, PA 17701</address>
-                </div>
-                <!-- City -->
-                <div class="city_detail" id="muncy">
-                    <img class="city_photo" src="img/hulls.jpg" alt="muncy" width="75" height="75" />
-                    <div class="city_info">
-                        <h2>Hull's Landing</h2>
-                        <address>27 PA-442, Muncy, PA 17756</address>
-                    </div>
-                </div>
-                <!-- City -->
-                <div class="city_detail" id="montoursville">
-                    <img class="city_photo" src="img/mill.jpg" alt="montoursville" width="75" height="75" />
-                    <div class="city_info">
-                        <h2>The Mill Tavern Bar & Restaurant</h2>
-                        <address>319 Broad St, Montoursville, PA 17754</address>
+        <section id="map">
+            <h2>Map To The Shows</h2>
+            <div class="map_container">
+                <!-- Dots -->
+                <a class="dot" style="top:107px;  left:420px;" cities="hughesville"></a>
+                <a class="dot" style="top:110px;  left:380px;" cities="williamsport"></a>
+                <a class="dot" style="top:118px;  left:417px;" cities="muncy" ></a>
+                <a class="dot" style="top:110px;  left:400px;" cities="montoursville"></a>
+                <form id="mapForm" name="mapForm" class="form_cities" method="post" action="">
+                    <select name="cities" id="cities">
+                        <option value="hughesville">Hughesville</option>
+                        <option value="williamsport">Williamsport</option>
+                        <option value="muncy">Muncy</option>
+                        <option value="montoursville">Montoursville</option>
+                        <option value="ALL" selected="selected">Show all cities</option>
+                    </select>
+                </form>
+                <div class="detail_container">
+                    <!-- City -->
+                    <div class="city_detail">
+                        <h3>Choose a city</h3>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="updates">
-        <h2>Updates:</h2>
-        <ul>
-            <li>New single <i>Beautiful Lie</i> is out now!</li>
-            <li>Check out the new music video below! </li>
-            <li>Stay Updated on Eric's YouTube Channel!</li>
-        </ul>
-        <a href="https://www.youtube.com/user/EricValMusic">Click
-            Here For Eric's YouTube Channel!</a>
-    </section>
+            <div class="city_detail_container">
+                <!-- City -->
+                <div class="city_detail" id="hughesville">
+                    <img class="city_photo" src="img/spartan.jpeg" alt="hughesville" width="75" height="75" />
+                    <div class="city_info">
+                        <h2>The Spartan Pub</h2>
+                        <address>104 N Main St, Hughesville, PA 17737</address>
+                    </div>
+                </div>
+                <!-- City -->
+                <div class="city_detail" id="williamsport">
+                    <img class="city_photo" src="img/riepstine.jpg" alt="williamsport" width="75" height="75" />
+                    <div class="city_info">
+                        <h2>Riepstine's Pub</h2>
+                        <address>913 Arch St, Williamsport, PA 17701</address>
+                    </div>
+                    <!-- City -->
+                    <div class="city_detail" id="muncy">
+                        <img class="city_photo" src="img/hulls.jpg" alt="muncy" width="75" height="75" />
+                        <div class="city_info">
+                            <h2>Hull's Landing</h2>
+                            <address>27 PA-442, Muncy, PA 17756</address>
+                        </div>
+                    </div>
+                    <!-- City -->
+                    <div class="city_detail" id="montoursville">
+                        <img class="city_photo" src="img/mill.jpg" alt="montoursville" width="75" height="75" />
+                        <div class="city_info">
+                            <h2>The Mill Tavern Bar & Restaurant</h2>
+                            <address>319 Broad St, Montoursville, PA 17754</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <article>
         <iframe width="640" height="360"
                 src="http://www.youtube.com/embed/SjGZoALjiLQ">
         </iframe>
     </article>
     <footer>
-        <p>Copyright Eric Val &copy; 2015 | Privacy Policy</p>
+        <p>Copyright Eric Val &copy; 2016 | Privacy Policy</p>
         <a href="https://www.facebook.com/eric.val?fref=ts"><img src="img/icon1.png" alt="Facebook"
                                                                  width="32" height="32"></a>
         <a href="https://twitter.com/ericvalmusic"> <img src="img/icon2.png" alt="Twitter" width="32"
@@ -118,5 +134,12 @@
     </footer>
 </main>
 <!--=== End of Container ===-->
+
+<!--==== Scripts ====-->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/globalize/globalize.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

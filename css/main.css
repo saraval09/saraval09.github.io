@@ -9,16 +9,10 @@
     line-height: 0; height: 0;
 }
 
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
-}
 
 
 body{
-    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    font-family: ‘Palatino Linotype’, Palatino, serif;
     text-transform: uppercase;
 }
 
@@ -47,8 +41,8 @@ h1{
 }
 
 strong{
-    color: #000000;
-    font-weight: bold;
+    color: #931100;
+    font-weight: lighter;
 }
 
 #official{
@@ -95,6 +89,30 @@ nav> ul> li> a{
     display: block;
     padding: 25px;
     text-decoration: none;
+
+}
+
+nav ul li ul li a {
+    display:block;
+    padding: 15px 0;
+    color: #000b5c;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+nav ul li:hover {
+    background:#E6E6E6;
+}
+
+nav ul li ul li:hover a {
+    background:#F7F7F7;
+}
+nav ul li ul.selected {
+    display:none;
+}
+nav ul li:hover ul.selected {
+    display:block;
 }
 
 /***** Upcoming Shows ****************/

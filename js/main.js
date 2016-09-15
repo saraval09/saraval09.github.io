@@ -1,4 +1,17 @@
+(function($) {
 
+    /* Nav Bar */
+
+    $('nav li ul').hide().removeClass('selected');
+    $('nav li').hover(
+        function() {
+            $('ul', this).stop().slideDown(200);
+        },
+        function() {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+})(jQuery);
 
 
 
