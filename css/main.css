@@ -9,12 +9,6 @@
     line-height: 0; height: 0;
 }
 
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
-}
 
 
 body{
@@ -48,7 +42,7 @@ h1{
 
 strong{
     color: #931100;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 #official{
@@ -95,49 +89,30 @@ nav> ul> li> a{
     display: block;
     padding: 25px;
     text-decoration: none;
-}
-/***** Updates ****************/
-
-#updates> ul> li{
-    padding: 5px;
-}
-
-#updates> ul> li:before {
-    content: "\2713";
-    color: #931100;
-}
-
-#updates{
-    margin: 0 auto;
-    border-radius: 5px;
-    padding: 20px;
-    width: 450px;
-    color: #cccccc;
-    background-color: rgba(69, 68, 69, 0.90);
-    float: left;
-
 
 }
 
-#updates> a{
-    color: #cfc2cd;
-}
-
-
-/***** Music ****************/
-#music{
-    float: right;
-    clear: both;
-    margin: 10px auto;
-    background-color: rgb(69, 68, 69);
-    border-radius: 5px;
-    padding: 20px;
-    width: 500px;
-    color: #cccccc;
+nav ul li ul li a {
+    display:block;
+    padding: 15px 0;
+    color: #000b5c;
+    text-align: center;
+    text-decoration: none;
 
 }
-audio{
-    margin: 20px;
+
+nav ul li:hover {
+    background:#E6E6E6;
+}
+
+nav ul li ul li:hover a {
+    background:#F7F7F7;
+}
+nav ul li ul.selected {
+    display:none;
+}
+nav ul li:hover ul.selected {
+    display:block;
 }
 
 /***** Upcoming Shows ****************/
@@ -149,35 +124,28 @@ section> ul> li{
 
 #shows{
     margin: 10px auto;
-    background-color: rgb(69, 68, 69);
+    background-color: rgba(69, 68, 69, 0.90);
     border-radius: 5px;
+/*    border:solid 1px #959595 ;
+
+    box-shadow: #cccccc 1px 1px 1px inset;*/
     padding: 20px;
     width: 500px;
     color: #cccccc;
 }
 
-
 /***** Map ****************/
-#map{
-    margin: 10px auto;
-    background-color: rgb(69, 68, 69);
-    border-radius: 5px;
-    padding: 20px;
-    width: 800px;
-    color: #cccccc;
-}
 h3{
     color: #931100;
     font-weight: bold;
 }
 
-address, h2{
+h2, address{
     color: #cccccc;
     text-align: center;
 }
 
 .map_container {
-    border-radius: 5px;
     background: url(../img/map.jpg) no-repeat 0 0;
     height: 325px;
     width: 760px;
@@ -279,11 +247,46 @@ address, h2{
     color: #00003f;
 }
 
-/*****  Videos ****************/
+/***** Updates ****************/
+
+#updates> ul> li{
+    padding: 5px;
+}
+
+#updates> ul> li:before {
+    content: "\2713";
+    color: #931100;
+}
+
+#updates{
+    margin: 0 auto;
+    border-radius: 5px;
+   /* border:solid 1px #959595 ;
+    box-shadow: #cccccc 1px 1px 1px inset;*/
+    padding: 20px;
+    width: 450px;
+    color: #cccccc;
+    background-color: rgba(69, 68, 69, 0.90);
+    clear: left;
+
+}
+
+#updates> a{
+    color: #cfc2cd;
+}
+
 
 iframe{
     margin: 50px 150px;
 }
+
+audio{
+    margin: 20px;
+}
+
+/***** Music Videos ****************/
+
+
 /***** Downloads ****************/
 
 p{
@@ -299,148 +302,9 @@ footer{
     font-size: .8em;
     font-weight: 300;
     margin:20px 10px;
-    text-align: center;
 }
 
 footer> a{
     display: inline;
     padding: 5px;
-}
-
-/*
-Custom CSS for...
-'Modern Business' HTML Theme by Start Bootstrap
-
-All Start Bootstrap themes are licensed under Apache 2.0.
-For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
-*/
-
-/* Global Styles */
-
-html, body {
-    height: 100%;
-}
-
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-.dropdown {
-    cursor:pointer;
-}
-
-
-.img-home-portfolio,
-.img-customer,
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.tab-pane {
-    margin-top: 15px;
-}
-
-/* Page Sections */
-.section,
-.section-colored {
-    padding: 50px 0;
-}
-
-.section-colored {
-    background-color: #e1e1e1;
-    /* change this to change the background color of a colored section */
-}
-
-.sidebar {
-    margin-top: 40px;
-}
-
-.sidebar ul {
-    border-radius: 5px;
-    padding: 5px;
-    border: 1px solid #cccccc;
-}
-
-/* Half Page Height Carousel Customization */
-.carousel {
-    height: 50%;
-}
-
-.item,
-.active,
-.carousel-inner {
-    height: 100%;
-}
-
-.fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-/* Social Icons Styles */
-.list-social-icons {
-    margin-bottom: 45px;
-}
-
-.tooltip-social a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.facebook-link a:hover {
-    color: #3b5998;
-}
-
-.linkedin-link a:hover {
-    color: #007fb1;
-}
-
-.twitter-link a:hover {
-    color: #39a9e0;
-}
-
-.google-plus-link a:hover {
-    color: #d14836;
-}
-
-/* Service Page Styles */
-.service-icon {
-    font-size: 50px;
-}
-
-/* 404 Page Styles */
-.error-404 {
-    font-size: 8em;
-}
-
-/* Pricing Page Styles */
-.price {
-    font-size: 4em;
-}
-
-.price-cents {
-    vertical-align: super;
-    font-size: 50%;
-}
-
-.price-month {
-    font-size: 35%;
-    font-style: italic;
-}
-
-/* Footer Styles */
-footer {
-    margin: 50px 0;
-}
-
-/* Responsive Styles */
-@media (max-width: 767px) {
-
-    .carousel {
-        height: 70%;
-        /* increases the carousel height so it looks good on phones */
-    }
 }
