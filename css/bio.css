@@ -6,19 +6,29 @@ section{
 
 }
 section> p{
-    color: #ececec;
+    color:#cccccc;
     line-height: 150%;
-    background-color: rgba(0,0,0, .7);
-    border-radius: 5px;
-    padding: 5px 15px;
-
 
 }
 
-#bio{
-    color: #141414;
+h2{
+    color: #931100;
     font-weight: lighter;
 }
+
+#sound{
+    width:500px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgba(0,0,0, 0.3);
+    border:solid 1px #959595 ;
+    border-radius: 5px;
+    box-shadow: #cccccc 1px 1px 1px inset;
+    text-align: center;
+}
+
+
+
 
 
 button{
