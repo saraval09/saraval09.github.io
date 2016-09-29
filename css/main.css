@@ -549,14 +549,15 @@ iframe{
 /*****  Bio ****************/
 
 .bio{
-    width:500px;
+    width:600px;
     margin: 0 auto;
-    padding: 5px 15px;
+    padding: 0 50px;
     float: right;
+
 }
 
 .bio>h2{
-    color: #141414;
+    color: #931100;
     font-weight: lighter;
     text-align: center;
 }
@@ -589,6 +590,7 @@ footer{
     font-weight: 300;
     margin:20px 10px;
     text-align: center;
+    clear: both;
 }
 
 footer> a{
