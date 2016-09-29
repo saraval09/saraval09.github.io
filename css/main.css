@@ -542,6 +542,24 @@ section> ul> li{
 iframe{
     margin: 50px 150px;
 }
+
+/*****  Bio ****************/
+
+.bio{
+    width:500px;
+    margin: 0 auto;
+    text-align: justify;
+    color: #ececec;
+    line-height: 150%;
+    background-color: rgba(0,0,0, .7);
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.bio>h2{
+    color: #141414;
+    font-weight: lighter;
+}
 /***** Downloads ****************/
 
 p{
