@@ -552,6 +552,7 @@ iframe{
     width:500px;
     margin: 0 auto;
     padding: 5px 15px;
+    float: right;
 }
 
 .bio>h2{
@@ -564,6 +565,12 @@ iframe{
     text-align: justify;
     color: #171717;
     line-height: 150%;
+
+}
+
+#bioPic{
+    float: left;
+    margin: 50px;
 
 }
 /***** Downloads ****************/
