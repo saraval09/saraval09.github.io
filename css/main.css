@@ -96,6 +96,9 @@ nav> ul> li> a{
     padding: 25px;
     text-decoration: none;
 }
+.selected{
+    display: none;
+}
 /***** Updates ****************/
 
 #updates> ul> li{
@@ -548,17 +551,20 @@ iframe{
 .bio{
     width:500px;
     margin: 0 auto;
-    text-align: justify;
-    color: #ececec;
-    line-height: 150%;
-    background-color: rgba(0,0,0, .7);
-    border-radius: 5px;
     padding: 5px 15px;
 }
 
 .bio>h2{
     color: #141414;
     font-weight: lighter;
+    text-align: center;
+}
+
+.bio>p{
+    text-align: justify;
+    color: #ececec;
+    line-height: 150%;
+
 }
 /***** Downloads ****************/
 
