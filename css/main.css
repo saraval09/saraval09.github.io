@@ -134,7 +134,7 @@ nav> ul> li> a{
 
 
 /***** Music ****************/
-#music{
+/*#music{
     float: right;
     clear: both;
     margin: 10px auto;
@@ -142,7 +142,7 @@ nav> ul> li> a{
     width: 500px;
     color: #cccccc;
 
-}
+}*/
 
 /*
     State hidden
