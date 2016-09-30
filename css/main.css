@@ -20,6 +20,7 @@
 body{
     font-family: ‘Palatino Linotype’, Palatino, serif;
     text-transform: uppercase;
+    height: 100%;
 }
 
 /***** The Header ****************/
