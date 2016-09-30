@@ -20,11 +20,6 @@
 body{
     font-family: ‘Palatino Linotype’, Palatino, serif;
     text-transform: uppercase;
-    background-image: url("../img/bg2.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 10px;
 }
 
 /***** The Header ****************/
@@ -34,6 +29,14 @@ header, main{
     margin: 0 auto;
 }
 
+main{
+    background-image: url("../img/bg2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 10px;
+
+}
 
 h1{
     float: left;
@@ -549,9 +552,7 @@ iframe{
 /*****  Bio ****************/
 
 .bio{
-    width:600px;
-    margin: 0 auto;
-    padding: 0 50px;
+    width:425px;
     float: right;
 
 }
@@ -566,7 +567,7 @@ iframe{
 
 #bioPic{
     float: left;
-    margin: 50px;
+    margin: 15px 5px;
 
 }
 
