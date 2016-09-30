@@ -20,6 +20,11 @@
 body{
     font-family: ‘Palatino Linotype’, Palatino, serif;
     text-transform: uppercase;
+    background-image: url("../img/bg2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 10px;
 }
 
 /***** The Header ****************/
@@ -29,14 +34,6 @@ header, main{
     margin: 0 auto;
 }
 
-main{
-    background-image: url("../img/bg2.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    padding: 10px;
-
-}
 
 h1{
     float: left;
