@@ -146,8 +146,6 @@ nav> ul> li> a{
 
 
 
-
-
 /***** Upcoming Shows ****************/
 
 section> ul> li{
@@ -160,11 +158,15 @@ section> ul> li{
     padding: 20px;
     width: 500px;
     color: #000000;
-    float: left;
+    text-align: center;
 }
 
 
 /***** Map ****************/
+
+#allMap{
+    text-align: center;
+}
 #map{
    height: 100%;
 }
