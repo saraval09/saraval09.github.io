@@ -1,13 +1,8 @@
-/**
- * Main AngularJS Web Application
- */
+/**AngularJS**/
+
 var app = angular.module('ericWebApp', [
     'ngRoute'
 ]);
-
-/**
- * Configure the Routes
- */
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
@@ -17,7 +12,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
         .when("/images", {templateUrl: "partials/images.html", controller: "PageCtrl"})
         .when("/videos", {templateUrl: "partials/videos.html", controller: "PageCtrl"})
-
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
@@ -26,25 +20,13 @@ app.config(['$routeProvider', function ($routeProvider) {
 /**Images**/
 
 $(document).ready(function() {
-
-
     $(".gallery_thumbnails a").click(function(e){
-
         //Disable the links
         e.preventDefault();
-
-
-
         //Create var to hold the links from the thumbnail
         var photo_fullview = $(this).attr("href");
-
-
         //Create our preview link
         var photo_preview = photo_fullview.replace("_fullview", "_preview");
-
-
-
-
         //Fade out the preview area
         $(".gallery_preview").fadeOut(500, function(){
             //Preload our clicked image
@@ -58,33 +40,17 @@ $(document).ready(function() {
                 $(".gallery_preview").html('<a class="overlayLink" href="'+photo_fullview+'" style="background-image:url('+photo_preview+')"</a>');
                 //Fade Back in the preview window
                 $(".gallery_preview").fadeIn(500);
-
-
-
                 setFancyBoxLinks();
                 updateThumbnails();
-
             });
-
-
-
         });
-
     });//end of click
 
     //Create first variables
-
-
     var first_photo_fullview= $(".gallery_thumbnails a").first().attr("href");
     var first_photo_preview=first_photo_fullview.replace("_fullview", "_preview");
 
-
-
     $(".gallery_preview").html('<a class="overlayLink" " href="'+first_photo_fullview+'" style="background-image:url('+first_photo_preview+');"></a>');
-
-
-
-
     setFancyBoxLinks();
     updateThumbnails();
 
@@ -97,13 +63,8 @@ function setFancyBoxLinks(){
         'transitionIn':'elastic',
         'transitionOut':'elastic',
         'autoScale': true
-
-
     });
-
-
 }
-
 
 function updateThumbnails(){
 
@@ -114,32 +75,17 @@ function updateThumbnails(){
             //Shade the thumbnail and give it a class of selected
             $(this).addClass("selected");
             $(this).children().fadeTo(250, .4);
-
-
-
         }else{
             //Remove the selected class and fade up to 100%
             $(this).removeClass("selected");
             $(this).children().css("opacity", "1");
-
-
         }
-
     });
-
-
-
-
-
 }
 
 
 
-/**
- * Google Map
- */
-
-
+/**Google Map**/
 var map;
 
 function initMap() {
