@@ -83,7 +83,115 @@ function updateThumbnails(){
     });
 }
 
+/**Music**/
 
+Amplitude.init({
+    "songs": [
+        {
+            "name": "Living Proof",
+            "artist": "Gregory Alan Isakov",
+            "album": "The Weatherman",
+            "url": "http://a1537.phobos.apple.com/us/r30/Music4/v4/60/af/eb/60afeba7-f8d9-a920-ff5b-b8666fdc2de4/mzaf_3379426683594665460.plus.aac.p.m4a",
+            "live": false,
+            "cover_art_url": "images/theweatherman.jpg"
+        },
+        {
+            "name": "Rooms",
+            "artist": "Mia and Jonah",
+            "album": "Rooms For Adelaide",
+            "url": "http://a656.phobos.apple.com/us/r30/Music/2d/d1/52/mzm.oymgnziu.aac.p.m4a",
+            "live": false,
+            "cover_art_url": "images/roomsforadelaide.jpg"
+        },
+        {
+            "name": "Suburban War",
+            "artist": "The Arcade Fire",
+            "album": "The Suburbs",
+            "url": "https://p.scdn.co/mp3-preview/f5b1bef707e8be7052a1efa5a39555c48e913d36",
+            "live": false,
+            "cover_art_url": "images/thesuburbs.jpeg"
+        },
+        {
+            "name": "Amsterdam",
+            "artist": "Gregory Alan Isakov",
+            "album": "The Weatherman",
+            "url": "http://a464.phobos.apple.com/us/r30/Music4/v4/4d/94/69/4d9469df-4b5c-31e1-a1b1-bc5b3421cb2d/mzaf_1227645205170517026.plus.aac.p.m4a",
+            "live": false,
+            "cover_art_url": "images/theweatherman.jpg"
+        },
+        {
+            "name": "Saint Valentine",
+            "artist": "Gregory Alan Isakov",
+            "album": "The Weatherman",
+            "url": "http://a1105.phobos.apple.com/us/r30/Music4/v4/2a/23/1d/2a231dec-3efb-f7a8-b190-b26f0790e8a6/mzaf_1799531085554015341.plus.aac.p.m4a",
+            "live": false,
+            "cover_art_url": "images/theweatherman.jpg"
+        },
+        {
+            "name": "Second Chances",
+            "artist": "Gregory Alan Isakov",
+            "album": "The Weatherman",
+            "url": "http://a1766.phobos.apple.com/us/r30/Music4/v4/de/2c/ae/de2caeb2-67a2-b19f-2b7e-f3aa38f69bfa/mzaf_4842981864723411733.plus.aac.p.m4a",
+            "live": false,
+            "cover_art_url": "images/theweatherman.jpg"
+        },
+        {
+            "name": "City WIth No Children",
+            "artist": "The Arcade Fire",
+            "album": "The Suburbs",
+            "url": "http://a1086.phobos.apple.com/us/r1000/099/Music/v4/6c/35/c3/6c35c369-b2c7-053d-04c3-6345bf9b62dd/mzaf_2986025997008722081.m4a",
+            "live": false,
+            "cover_art_url": "images/thesuburbs.jpeg"
+        }
+    ],
+    "default_album_art": "images/no-cover-large.png",
+    "callbacks": {
+        "after_init": "album_change",
+        "after_album_change": "album_change",
+        "after_song_ended": "album_change"
+    }
+});
+
+function album_change(){
+    var activeSong = Amplitude.getActiveSongMetadata();
+
+    $('.album-display').hide();
+    $('.album-container').removeClass('active-album-container');
+
+    switch( activeSong.album ){
+        case 'The Weatherman':
+            $('.the-weatherman-display').show();
+            $('.the-weatherman').addClass('active-album-container');
+            break;
+        case 'Rooms For Adelaide':
+            $('.rooms-for-adelaide-display').show();
+            $('.rooms-for-adelaide').addClass('active-album-container');
+            break;
+        case 'The Suburbs':
+            $('.the-suburbs-display').show();
+            $('.the-suburbs').addClass('active-album-container');
+            break;
+    }
+}
+$('.album-container').click(function(){
+    $('.album-display').hide();
+    $('.album-container').removeClass('active-album-container');
+
+    if( $(this).hasClass('the-weatherman') ){
+        $('.the-weatherman-display').show();
+        $('.the-weatherman').addClass('active-album-container');
+    }
+
+    if( $(this).hasClass('rooms-for-adelaide') ){
+        $('.rooms-for-adelaide-display').show();
+        $('.rooms-for-adelaide').addClass('active-album-container');
+    }
+
+    if( $(this).hasClass('the-suburbs') ){
+        $('.the-suburbs-display').show();
+        $('.the-suburbs').addClass('active-album-container');
+    }
+});
 
 /**Google Map**/
 var map;
