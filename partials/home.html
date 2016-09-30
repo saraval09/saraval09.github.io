@@ -26,12 +26,13 @@
     </section>
     <section id="allMap">
     <h2>Map To The Shows</h2>
+
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a <style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(27.044224,-82.23592539999999),mapTypeId: google.maps.MapTypeId.SATELLITE};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(27.044224,-82.23592539999999)});infowindow = new google.maps.InfoWindow({content:'<strong>X</strong><br>North port<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
         <div id="floating-panel">
             <input id="address" type="textbox" value="Sydney, NSW">
             <input id="submit" type="button" value="Geocode">
         </div>
         <div id="map"></div>
-        <!-- Replace the value of the key parameter with your own API key. -->
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6vp2G8ZD3x_mggKW7Rpv0gLBC6_IhDp8&callback=initMap">
         </script>
