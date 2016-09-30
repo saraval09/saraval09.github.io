@@ -89,16 +89,16 @@ function updateThumbnails(){
 
 /**Google Map**/
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: {lat: -34.397, lng: 150.644}
-    });
-    var geocoder = new google.maps.Geocoder();
+    function init_map() {
+        var myOptions = {
+            zoom:10,center:new google.maps.LatLng(27.044224,-82.23592539999999),mapTypeId: google.maps.MapTypeId.SATELLITE
+        };
+    }
+    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
 
-    document.getElementById('submit').addEventListener('click', function() {
-        geocodeAddress(geocoder, map);
-    });
-}
+    marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(27.044224,-82.23592539999999)});
+
+    infowindow = new google.maps.InfoWindow({content:'<strong>X</strong><br>North port<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
 
 function geocodeAddress(geocoder, resultsMap) {
     var address = document.getElementById('address').value;
