@@ -8,6 +8,7 @@
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
 </head>
 <body ng-app="ericWebApp">
 <div ng-include='"templates/header.html"'></div>
@@ -29,5 +30,10 @@
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
 <script type="text/javascript" src="js/amplitude.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    soundcloud.addEventListener('onPlayerReady', function(player, data) {
+        player.api_play();
+    });
+</script>
 </body>
 </html>
