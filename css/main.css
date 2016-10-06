@@ -115,6 +115,20 @@ nav ul li ul li a {
     text-decoration: none;
 
 }
+
+nav ul li:hover {
+    background:#E6E6E6;
+}
+
+nav ul li ul li:hover a {
+    background:#F7F7F7;
+}
+nav ul li ul.selected {
+    display:none;
+}
+nav ul li:hover ul.selected {
+    display:block;
+}
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
