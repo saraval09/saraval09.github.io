@@ -83,7 +83,6 @@ function updateThumbnails(){
     });
 }
 
-/**Music**/
 
 
 
