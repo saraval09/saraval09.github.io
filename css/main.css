@@ -345,7 +345,7 @@ section> a.zoom {
 
 /*****  Contact Page ****************/
 
-#contact{
+#contact, form{
     margin: 0 auto;
     text-align: center;
 }
