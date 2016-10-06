@@ -320,14 +320,14 @@ section> a.zoom {
 
 /*****  Bio ****************/
 
-/*.bio{
+.bio{
     width:425px;
     float: right;
 
 }
 
 
-.bio>p{
+/*.bio>p{
     text-align: justify;
     color: #171717;
     line-height: 150%;
