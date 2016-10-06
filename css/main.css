@@ -357,8 +357,9 @@ section> a.zoom {
 
 input{
     width: 15%;
-    height: 20px;
-    margin: 30px 0;
+    height: 10px;
+    margin: 40px 25px;
+    padding: 5px;
 }
 
 textarea{
