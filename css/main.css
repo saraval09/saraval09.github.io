@@ -223,9 +223,12 @@ iframe{
 }
 
 #video{
+    text-align: center;
+}
+
+#videoHeader{
     color: #141414;
     font-size: 2em;
-    text-align: center;
 }
 
 /*****  Images ****************/
