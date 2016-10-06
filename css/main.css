@@ -105,7 +105,11 @@ nav> ul> li> a{
     text-decoration: none;
 }
 
-
+nav> ul> li> a> ul> li>a{
+    display: inline;
+    padding: 25px;
+    text-decoration: none;
+}
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -125,7 +129,9 @@ nav> ul> li> a{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
