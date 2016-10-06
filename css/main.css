@@ -222,11 +222,11 @@ iframe{
     margin: 50px 150px;
 }
 
-#video{
+.video{
     text-align: center;
 }
 
-#videoHeader{
+.videoHeader{
     color: #141414;
     font-size: 2em;
 }
