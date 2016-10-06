@@ -105,12 +105,16 @@ nav> ul> li> a{
     text-decoration: none;
 }
 
-nav> ul> ul> li>a{
-    display: inline;
-    padding: 25px;
-    text-decoration: none;
-}
 
+
+nav ul li ul li a {
+    display:block;
+    padding: 15px 0;
+    color: #000b5c;
+    text-align: center;
+    text-decoration: none;
+
+}
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
