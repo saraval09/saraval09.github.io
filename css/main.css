@@ -340,7 +340,7 @@ section> a.zoom {
 /*****  Contact Page ****************/
 
 form{
-    margin: 20px;
+    margin: 0 auto;
 }
 
 ::-webkit-input-placeholder{
