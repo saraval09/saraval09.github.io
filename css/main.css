@@ -120,7 +120,7 @@ nav> ul> ul> li>a{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/*!* Links inside the dropdown *!
+/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -128,7 +128,7 @@ nav> ul> ul> li>a{
     display: block;
 }
 
-!* Change color of dropdown links on hover *!
+/*!* Change color of dropdown links on hover *!
 .dropdown-content a:hover {
     background-color: #f1f1f1
 }
