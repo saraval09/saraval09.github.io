@@ -355,12 +355,12 @@ input{
 }
 
 textarea{
-    width: 40%;
+    width: 60%;
     height: 200px;
 }
 
 #submit{
-    width: 10%;
+    width: 20%;
     height: 25px;
     background-color: #353a3d;
     color: #ffffff;
