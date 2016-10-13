@@ -69,7 +69,7 @@ h2{
 }*/
 
 /***** Navigation Bar ****************/
-.navbar-brand-centered {
+/*.navbar-brand-centered {
     position: absolute;
     left: 50%;
     display: block;
@@ -80,7 +80,7 @@ h2{
 .navbar>.container .navbar-brand-centered,
 .navbar>.container-fluid .navbar-brand-centered {
     margin-left: -80px;
-}
+}*/
 
 /*
 nav {

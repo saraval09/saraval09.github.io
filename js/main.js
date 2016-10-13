@@ -17,16 +17,46 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 /**Nav Bar**/
+var app = angular.module("myApp", []);
+app.controller("menuController", ['$scope', function ($scope) {
+    $scope.items = [
+        {
+            name: "Menu Item 1",
+            link: "#main1",
+            submenu: [
+                {
+                    name: "Snake",
+                    link: "#sub1"
+                },
+                {
+                    name: "Apple",
+                    link: "#sub2"
+                }
+            ]
+        },
+        {
+            name: "Menu Item 2",
+            link: "#main2",
+            submenu: null
+        },
+        {
+            name: "Menu Item 3",
+            link: "#main3",
+            submenu: [
+                {
+                    name: "Sub Item 1",
+                    link: "#sub1"
+                },
+                {
+                    name: "Sub Item 2",
+                    link: "#sub2"
+                }
+            ]
+        }
+    ];
+}]);
 
- $(document).ready(function () {
-$('.navbar .dropdown').hover(function () {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
-    }, function () {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp(105)
-    });
-});
-
-/*/!**Images**!/
+/**Images**/
 
 $(document).ready(function() {
     $(".gallery_thumbnails a").click(function(e){
@@ -95,7 +125,7 @@ function updateThumbnails(){
 
 
 
-/!**Google Map**!/
+/**Google Map**/
 function initMap() {
     function init_map() {
         var myOptions = {
@@ -121,5 +151,5 @@ function geocodeAddress(geocoder, resultsMap) {
             alert('Geocode was not successful for the following reason: ' + status);
         }
     });
-}*/
+}
 
