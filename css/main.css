@@ -117,11 +117,10 @@ nav> ul> ul> li>a{
     position: relative;
     background-color: #f9f9f9;
     min-width: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 /* Links inside the dropdown */
-.dropdown-content> a {
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -129,7 +128,7 @@ nav> ul> ul> li>a{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content> a:hover {
+.dropdown-content a:hover {
     background-color: #f1f1f1
 }
 
@@ -141,6 +140,7 @@ nav> ul> ul> li>a{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #c5c3c6;
+    padding:10px;
 }
 /***** Updates ****************/
 
