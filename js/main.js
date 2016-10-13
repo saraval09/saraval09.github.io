@@ -3,7 +3,7 @@
 var app = angular.module('ericWebApp', [
     'ngRoute'
 ]);
-app.config(['$routeProvider', function ($routeProvider) {
+/*app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
         .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
@@ -14,7 +14,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/videos", {templateUrl: "partials/videos.html", controller: "PageCtrl"})
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
-}]);
+}]);*/
 
 /**Nav Bar**/
 
