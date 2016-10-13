@@ -70,6 +70,12 @@ h2{
 
 /***** Navigation Bar ****************/
 
+nav {
+    margin-top: 60px;
+    box-shadow: 5px 4px 5px #000;
+}
+
+/*
 nav{
     border-top: 1px solid #dedede;
     display: block;
@@ -110,6 +116,7 @@ nav> ul> ul> li>a{
     padding: 25px;
     text-decoration: none;
 }
+*/
 
 /*!* Dropdown Content (Hidden by Default) *!
 .dropdown-content {
