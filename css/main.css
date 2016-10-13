@@ -136,12 +136,12 @@ nav> ul> ul> li>a{
 !* Show the dropdown menu on hover *!
 .dropdown:hover .dropdown-content {
     display: block;
-}
+}*/
 
-!* Change the background color of the dropdown button when the dropdown content is shown *!
+/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #c5c3c6;
-}*/
+}
 /***** Updates ****************/
 
 #updates> ul> li{
