@@ -1,6 +1,6 @@
 /**AngularJS**/
 
-var app = angular.module('ericWebApp', [
+/*var app = angular.module('ericWebApp', [
     'ngRoute'
 ]);
 app.config(['$routeProvider', function ($routeProvider) {
@@ -14,7 +14,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/videos", {templateUrl: "partials/videos.html", controller: "PageCtrl"})
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
-}]);
+}]);*/
 
 /**Nav Bar**/
 
@@ -26,7 +26,7 @@ $('.navbar .dropdown').hover(function () {
     });
 });
 
-/**Images**/
+/*/!**Images**!/
 
 $(document).ready(function() {
     $(".gallery_thumbnails a").click(function(e){
@@ -95,7 +95,7 @@ function updateThumbnails(){
 
 
 
-/**Google Map**/
+/!**Google Map**!/
 function initMap() {
     function init_map() {
         var myOptions = {
@@ -121,5 +121,5 @@ function geocodeAddress(geocoder, resultsMap) {
             alert('Geocode was not successful for the following reason: ' + status);
         }
     });
-}
+}*/
 
