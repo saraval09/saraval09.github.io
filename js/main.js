@@ -3,7 +3,7 @@
 var app = angular.module('ericWebApp', [
     'ngRoute'
 ]);
-/*app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
         .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
@@ -14,47 +14,9 @@ var app = angular.module('ericWebApp', [
         .when("/videos", {templateUrl: "partials/videos.html", controller: "PageCtrl"})
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
-}]);*/
-
-/**Nav Bar**/
-
-app.controller("menuController", ['$scope', function ($scope) {
-    $scope.items = [
-        {
-            name: "Menu Item 1",
-            link: "#main1",
-            submenu: [
-                {
-                    name: "Snake",
-                    link: "#sub1"
-                },
-                {
-                    name: "Apple",
-                    link: "#sub2"
-                }
-            ]
-        },
-        {
-            name: "Menu Item 2",
-            link: "#main2",
-            submenu: null
-        },
-        {
-            name: "Menu Item 3",
-            link: "#main3",
-            submenu: [
-                {
-                    name: "Sub Item 1",
-                    link: "#sub1"
-                },
-                {
-                    name: "Sub Item 2",
-                    link: "#sub2"
-                }
-            ]
-        }
-    ];
 }]);
+
+
 
 /**Images**/
 

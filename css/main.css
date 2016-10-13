@@ -1,7 +1,7 @@
 
 /***** The Page ****************/
 
-/*.clearfix:after {
+.clearfix:after {
     content: ".";
     display: block;
     clear: both;
@@ -23,7 +23,7 @@ html, body{
     height: 100%;
 }
 
-!***** The Header ****************!
+/***** The Header ****************/
 
 header, main{
     width: 960px;
@@ -66,30 +66,9 @@ h2{
     color: #cccccc;
     margin-right: 20px;
     font-size: 1em;
-}*/
+}
 
 /***** Navigation Bar ****************/
-/*.navbar-brand-centered {
-    position: absolute;
-    left: 50%;
-    display: block;
-    width: 160px;
-    text-align: center;
-    background-color: transparent;
-}
-.navbar>.container .navbar-brand-centered,
-.navbar>.container-fluid .navbar-brand-centered {
-    margin-left: -80px;
-}*/
-
-/*
-nav {
-    margin-top: 60px;
-    box-shadow: 5px 4px 5px #000;
-}
-
-
-
 
 nav{
     border-top: 1px solid #dedede;
@@ -132,11 +111,7 @@ nav> ul> ul> li>a{
     text-decoration: none;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}*/
-
-/*!* Dropdown Content (Hidden by Default) *!
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: relative;
@@ -145,7 +120,7 @@ nav> ul> ul> li>a{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-!* Links inside the dropdown *!
+/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -153,23 +128,23 @@ nav> ul> ul> li>a{
     display: block;
 }
 
-!* Change color of dropdown links on hover *!
+/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #f1f1f1
 }
 
-!* Show the dropdown menu on hover *!
+/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: inline;
 }
 
-!* Change the background color of the dropdown button when the dropdown content is shown *!
+/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #c5c3c6;
-}*/
+}
 /***** Updates ****************/
 
-/*#updates> ul> li{
+#updates> ul> li{
     padding: 5px;
 }
 
@@ -193,7 +168,7 @@ nav> ul> ul> li>a{
 }
 
 
-!***** Music ****************!
+/***** Music ****************/
 #music{
     float: right;
     clear: both;
@@ -206,7 +181,7 @@ nav> ul> ul> li>a{
 
 
 
-!***** Upcoming Shows ****************!
+/***** Upcoming Shows ****************/
 
 section> ul> li{
     list-style: none;
@@ -222,7 +197,7 @@ section> ul> li{
 }
 
 
-!***** Map ****************!
+/***** Map ****************/
 
 #allMap{
     text-align: center;
@@ -244,7 +219,7 @@ section> ul> li{
 }
 
 
-!*****  Videos ****************!
+/*****  Videos ****************/
 
 iframe{
     margin: 50px 150px;
@@ -259,7 +234,7 @@ iframe{
     font-size: 2em;
 }
 
-!*****  Images ****************!
+/*****  Images ****************/
 
 
 section> a img {
@@ -346,7 +321,7 @@ section> a.zoom {
     text-decoration: none;
 }
 
-!*****  Bio ****************!
+/*****  Bio ****************/
 
 .bio{
     width:425px;
@@ -368,7 +343,7 @@ section> a.zoom {
 
 }
 
-!*****  Contact Page ****************!
+/*****  Contact Page ****************/
 
 #contact, form{
     margin: 0 auto;
@@ -422,7 +397,7 @@ textarea{
 }
 
 
-!***** Footer ****************!
+/***** Footer ****************/
 
 footer{
     color: #929292;
@@ -437,7 +412,7 @@ footer{
 footer> a{
     display: inline;
     padding: 5px;
-}*/
+}
 
 
 
