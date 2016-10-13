@@ -17,7 +17,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 /**Nav Bar**/
-var app = angular.module("myApp", []);
+
 app.controller("menuController", ['$scope', function ($scope) {
     $scope.items = [
         {
