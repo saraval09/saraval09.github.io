@@ -69,15 +69,26 @@ h2{
 }
 
 /***** Navigation Bar ****************/
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+}
+.navbar>.container .navbar-brand-centered,
+.navbar>.container-fluid .navbar-brand-centered {
+    margin-left: -80px;
+}
 
+/*
 nav {
     margin-top: 60px;
     box-shadow: 5px 4px 5px #000;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+
 
 
 nav{
@@ -120,6 +131,10 @@ nav> ul> ul> li>a{
     padding: 25px;
     text-decoration: none;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}*/
 
 /*!* Dropdown Content (Hidden by Default) *!
 .dropdown-content {
