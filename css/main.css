@@ -229,9 +229,21 @@ iframe{
 }
 
 /*****  Images ****************/
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
 
+.thumbnail {
+    padding: 0;
+}
 
-section> a img {
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
+
+/*section> a img {
     border: none;
 }
 
@@ -313,7 +325,7 @@ section> a.zoom {
     padding: 0 0 5px 20px;
     text-transform: uppercase;
     text-decoration: none;
-}
+}*/
 
 /*****  Bio ****************/
 

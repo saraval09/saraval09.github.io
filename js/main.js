@@ -19,8 +19,31 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 
 /**Images**/
+jQuery(document).ready(function($) {
 
-$(document).ready(function() {
+    $('#myCarousel').carousel({
+        interval: 5000
+    });
+
+    //Handles the carousel thumbnails
+    $('[id^=carousel-selector-]').click(function () {
+        var id_selector = $(this).attr("id");
+        try {
+            var id = /-(\d+)$/.exec(id_selector)[1];
+            console.log(id_selector, id);
+            jQuery('#myCarousel').carousel(parseInt(id));
+        } catch (e) {
+            console.log('Regex failed!', e);
+        }
+    });
+    // When the carousel slides, auto update the text
+    $('#myCarousel').on('slid.bs.carousel', function (e) {
+        var id = $('.item.active').data('slide-number');
+        $('#carousel-text').html($('#slide-content-'+id).html());
+    });
+});
+
+/*$(document).ready(function() {
     $(".gallery_thumbnails a").click(function(e){
         //Disable the links
         e.preventDefault();
@@ -82,7 +105,7 @@ function updateThumbnails(){
             $(this).children().css("opacity", "1");
         }
     });
-}
+}*/
 
 
 
