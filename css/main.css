@@ -71,6 +71,7 @@ h2{
 /***** Navigation Bar ****************/
 
 nav{
+    font-size: 1.2em;
     border-top: 1px solid #dedede;
     display: block;
     overflow: hidden;
@@ -95,7 +96,7 @@ nav> ul> li:not(:first-of-type)::after{
     top: 30px;
     left: -1px;
     width: 3px;
-    height: 15px;
+
     background: #ffffff;
 }
 
@@ -103,45 +104,38 @@ nav> ul> li> a{
     display: inline;
     padding: 25px;
     text-decoration: none;
+    color: #171717;
 }
 
-nav> ul> ul> li>a{
-    display: inline;
-    padding: 25px;
-    text-decoration: none;
-}
 
 /* Dropdown Content (Hidden by Default) */
+.dropdown{
+    padding: 0 10px;
+}
 .dropdown-content {
+    padding: 5px 10px;
     display: none;
     position: relative;
-    background-color: #f9f9f9;
     min-width: 10px;
+    font-size: .8em;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #f1f1f1
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #c5c3c6;
-    padding:10px;
+.dropdown:hover .dropdown-content a:hover {
+    background: #931100;
+    color: #dedcdf;
 }
+
 /***** Updates ****************/
 
 #updates> ul> li{
