@@ -350,14 +350,14 @@ section> a.zoom {
 
 
 input{
-    width: 15%;
+    width: 22%;
     height: 10px;
-    margin: 40px 25px;
-    padding: 5px;
+    margin: 20px;
+    padding: 10px;
 }
 
 textarea{
-    width: 60%;
+    width: 76%;
     height: 200px;
 }
 
