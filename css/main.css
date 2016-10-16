@@ -231,7 +231,7 @@ iframe{
 /*****  Images ****************/
 
 
-/*section> a img {
+section> a img {
     border: none;
 }
 
@@ -313,7 +313,7 @@ section> a.zoom {
     padding: 0 0 5px 20px;
     text-transform: uppercase;
     text-decoration: none;
-}*/
+}
 
 /*****  Bio ****************/
 
