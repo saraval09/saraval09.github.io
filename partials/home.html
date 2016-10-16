@@ -28,7 +28,7 @@
     <section id="allMap">
     <h2>Map To The Shows</h2>
 
-
+<!--
         <div style='overflow:hidden;height:440px;width:700px;'></div>
             <div id='gmap_canvas' style='height:440px;width:700px;'></div>
             <div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
@@ -36,11 +36,10 @@
         <div id="floating-panel">
             <input id="address" type="textbox" value="Sydney, NSW">
             <input id="submit" type="button" value="Geocode">
-        </div>
+        </div>-->
         <div id="map"></div>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6vp2G8ZD3x_mggKW7Rpv0gLBC6_IhDp8&callback=initMap">
-        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyC6vp2G8ZD3x_mggKW7Rpv0gLBC6_IhDp8&callback=initMap" rel="application/javascript"></script>
+
     </section>
     <article>
         <iframe width="640" height="360"
