@@ -193,25 +193,10 @@ section> ul> li{
 
 /***** Map ****************/
 
-#allMap{
-    text-align: center;
-    margin: 0 auto;
+#map {
+    width: 100%;
+    height: 600px;
 }
-
-#map{
-   height: 100%;
-}
-
-#map-canvas {
-    margin: 0;
-    padding: 0;
-    height: 400px;
-    max-width: none;
-}
-#map-canvas img {
-    max-width: none !important;
-}
-
 
 /*****  Videos ****************/
 
