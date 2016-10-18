@@ -6,15 +6,16 @@ var app = angular.module('ericWebApp', [
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
-        .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
+        .when("/", {templateUrl: "partials/home.html"})
         // Pages
-        .when("/bio", {templateUrl: "partials/bio.html", controller: "PageCtrl"})
-        .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
-        .when("/images", {templateUrl: "partials/images.html", controller: "PageCtrl"})
-        .when("/videos", {templateUrl: "partials/videos.html", controller: "PageCtrl"})
+        .when("/bio", {templateUrl: "partials/bio.html"})
+        .when("/contact", {templateUrl: "partials/contact.html"})
+        .when("/images", {templateUrl: "partials/images.html"})
+        .when("/videos", {templateUrl: "partials/videos.html"})
         // else 404
-        .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+        .otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
+
 
 
 
@@ -26,7 +27,7 @@ jQuery(document).ready(function($) {
     });
 
     //Handles the carousel thumbnails
-    $('[id^=carousel-selector-]').click(function () {
+    $('[id=carousel-selector-0]').click(function () {
         var id_selector = $(this).attr("id");
         try {
             var id = /-(\d+)$/.exec(id_selector)[1];
