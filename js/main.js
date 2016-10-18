@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
 /**Google Map**/
 (function() {
 
-    var app = angular.module('gmaps', []);
+    var app = angular.module('ericWebApp', []);
 
     app.directive('googleMap', function () {
         return {
