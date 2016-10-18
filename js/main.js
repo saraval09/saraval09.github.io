@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
     });
 
     //Handles the carousel thumbnails
-    $('[id=carousel-selector-0]').click(function () {
+    $('#carousel-selector-.').click(function () {
         var id_selector = $(this).attr("id");
         try {
             var id = /-(\d+)$/.exec(id_selector)[1];
