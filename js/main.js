@@ -16,6 +16,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         .otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
 
+/**Google Map**/
 app.directive('googleMap', function () {
     return {
 
@@ -48,7 +49,7 @@ jQuery(document).ready(function($) {
     });
 
     //Handles the carousel thumbnails
-    $( '.hide-bullets #carousel-selector-0').on('click', function () {
+    $( '[id^=carousel-selector-]').on('click', function () {
         var id_selector = $(this).attr("id");
         try {
             var id = /-(\d+)$/.exec(id_selector)[1];
@@ -66,32 +67,6 @@ jQuery(document).ready(function($) {
 });
 
 
-/**Google Map**/
-/*(function() {
 
-    var app = angular.module('ericWebApp', []);
 
-    app.directive('googleMap', function () {
-        return {
-
-            restrict: 'AE',
-
-            template: '<div id="map"></div>',
-
-            controller: function ($scope) {
-
-                var mapOptions = {
-                    zoom: 15,
-                    center: new google.maps.LatLng(28.602432, -81.200264),
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-
-                $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-            }
-        }
-
-    });
-
-    // Passing google as a dependency into this module
-})(google);*/
 
