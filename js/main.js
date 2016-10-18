@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
     });
 
     //Handles the carousel thumbnails
-    $('#carousel-selector-0').on('click', function () {
+    $('.hide-bullets #carousel-selector-0').on('click', function () {
         var id_selector = $(this).attr("id");
         try {
             var id = /-(\d+)$/.exec(id_selector)[1];
