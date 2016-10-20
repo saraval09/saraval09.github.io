@@ -6,15 +6,25 @@ var app = angular.module('ericWebApp', [
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
-        .when("/", {templateUrl: "partials/home.html"})
+        .when("/", {templateUrl: "partials/home.html", controller: 'homeController'})
         // Pages
         .when("/bio", {templateUrl: "partials/bio.html"})
         .when("/contact", {templateUrl: "partials/contact.html"})
-        .when("/images", {templateUrl: "partials/images.html"})
-        .when("/videos", {templateUrl: "partials/videos.html"})
+        .when("/videos", {templateUrl: "/partials/videos.html"})
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
+
+
+app.controller('homeController', ['$scope', function($scope) {
+        $scope.greeting = 'Hola!';
+    $scope.data={
+        images: ['img/img1_preview.jpg', 'img/img2_preview.jpg', 'img/img3_preview.jpg',
+            'img/img4_preview.jpg', 'img/img5_preview.jpg', 'img/img6_preview.jpg'
+        ],
+        videos: ['http://www.youtube.com/embed/SYAojqkcYzw']
+    };
+    }]);
 
 /**Google Map**/
 app.directive('googleMap', function () {

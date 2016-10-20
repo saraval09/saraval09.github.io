@@ -229,6 +229,24 @@ iframe{
     margin:0 auto;
 }
 
+.test {
+    display: inline-block;
+    vertical-align: top;
+}
+.test img{
+    height:100px;
+    width:100px;
+}
+.test img:hover{
+    height: 200px;
+    width:200px;
+}
+.wrapper{
+    width:450px;
+}
+.wrapper:hover{
+    width:500px;
+}
 /*****  Bio ****************/
 
 .bio{
