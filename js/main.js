@@ -15,14 +15,30 @@ app.config(['$routeProvider', function ($routeProvider) {
         .otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
 
+    /**Images**/
 
-app.controller('homeController', ['$scope', function($scope) {
+app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
         $scope.greeting = 'Hola!';
     $scope.data={
         images: ['img/img1_preview.jpg', 'img/img2_preview.jpg', 'img/img3_preview.jpg',
             'img/img4_preview.jpg', 'img/img5_preview.jpg', 'img/img6_preview.jpg'
         ],
-        videos: ['http://www.youtube.com/embed/SYAojqkcYzw']
+        videos: ['http://www.youtube.com/embed/SjGZoALjiLQ', 'http://www.youtube.com/embed/emel6lFmYPI'],
+        videoThumbs: ['img/video_1.jpg'],
+        selectedImage: "",
+        selectedVideo:"http://www.youtube.com/embed/SjGZoALjiLQ"
+    };
+
+    if ($scope.data.images.length > 0){
+        $scope.data.selectedImage = $scope.data.images[0]
+    }
+
+    $scope.showImage = function(image){
+        $scope.data.selectedImage = image
+
+    };
+    $scope.playVideo = function(index){
+        $scope.data.selectedVideo = $sce.trustAsResourceUrl($scope.data.videos[index])
     };
     }]);
 

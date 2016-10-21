@@ -1,4 +1,25 @@
-<main >
+<header class="clearfix">
+    <h1><strong>Eric</strong></h1>
+    <h1 id="val">Val</h1>
+    <h2 id="official">Official Website</h2>
+    <nav >
+        <ul>
+            <li><a href="/#/">Home</a></li>
+            <li><a href="/#/bio">Bio</a></li>
+            <li class="dropdown">Gallery
+                <ul class="dropdown-content"  style="list-style-type:none">
+                    <li ng-click="data.imagesActive=true" class="link">Images</li>
+                    <li ng-click="data.videosActive=true" class="link">Videos</li>
+                </ul>
+
+            </li>
+            <li><a href="/#/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main ng-class="{'static': data.imagesActive || data.videosActive}">
     <section id="updates">
         <h2>Updates:</h2>
         <ul>
@@ -28,12 +49,35 @@
     <section id="allMap">
     <h2>Map To The Shows</h2>
         <div google-map></div>
-
+[
     </section>
     <article>
         <iframe width="640" height="360"
                 src="http://www.youtube.com/embed/SjGZoALjiLQ">
         </iframe>
     </article>
+
+    <div class="modalize" ng-show="data.imagesActive || data.videosActive">
+        <div class="thumbWrapper">
+            <div class="glyphicon glyphicon-remove-circle close"
+                 ng-click="data.imagesActive = data.videosActive = false; "></div>
+            <div ng-repeat="image in data.images" ng-show="data.imagesActive" class="test" >
+                <img ng-click="showImage(image)" class="thumbnail" ng-src="{{image}}" />
+            </div>
+            <div ng-repeat="thumbnail in data.videoThumbs" ng-show=" data.videosActive" class="test" >
+                <img ng-click="playVideo($index)" class="thumbnail" ng-src="{{thumbnail}}" />
+            </div>
+        </div>
+        <div class="preview">
+            <div  ng-show="data.imagesActive" class="viewImage">
+                <img class="mainImage" ng-src="{{data.selectedImage}}" />
+            </div>
+            <div  ng-show="data.videosActive" class="viewVideo">
+                <iframe ng-src="{{data.selectedVideo}}">
+
+                </iframe>
+            </div>
+        </div>
+    </div>
 
 </main>

@@ -202,6 +202,8 @@ section> ul> li{
 
 iframe{
     margin: 50px 150px;
+    width:640px;
+    height:360px;
 }
 
 .video{
@@ -229,23 +231,68 @@ iframe{
     margin:0 auto;
 }
 
-.test {
-    display: inline-block;
-    vertical-align: top;
+.test{
+    margin-top: 20px;
 }
+
 .test img{
     height:100px;
     width:100px;
+    cursor: pointer;
 }
-.test img:hover{
-    height: 200px;
-    width:200px;
+
+.thumbWrapper{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    width:150px;
+    overflow: scroll;
 }
-.wrapper{
-    width:450px;
+
+.preview{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 150px;
 }
-.wrapper:hover{
-    width:500px;
+
+.viewImage{
+    width: 500px;
+    height: 500px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.modalize{
+    position: fixed;
+    top: 0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+
+main.static{
+    height: 500px;
+    width: 1024px;
+    overflow: hidden;
+}
+
+.link{
+    cursor: pointer;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right:15px;
+    color: white;
 }
 /*****  Bio ****************/
 
