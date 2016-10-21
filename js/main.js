@@ -23,8 +23,9 @@ app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
         images: ['img/img1_preview.jpg', 'img/img2_preview.jpg', 'img/img3_preview.jpg',
             'img/img4_preview.jpg', 'img/img5_preview.jpg', 'img/img6_preview.jpg'
         ],
-        videos: ['http://www.youtube.com/embed/SjGZoALjiLQ', 'http://www.youtube.com/embed/emel6lFmYPI'],
-        videoThumbs: ['img/video_1.jpg', 'img/video_1.jpg'],
+        videos: ['http://www.youtube.com/embed/SjGZoALjiLQ', 'http://www.youtube.com/embed/emel6lFmYPI', 'http://www.youtube.com/embed/SYAojqkcYzw',
+        'http://www.youtube.com/embed/y6HgGV0QhlE', 'http://www.youtube.com/embed/Zs3qY0wts1c', 'http://www.youtube.com/embed/-L1FpZ6gprI'],
+        videoThumbs: ['img/video_1.jpg', 'img/video_2.jpg','img/video_3.jpg', 'img/video_4.jpg', 'img/video_5.jpg', 'img/video_6.jpg'],
         selectedImage: "",
         selectedVideo: ""
     };
