@@ -64,7 +64,7 @@
             <div ng-repeat="image in data.images" ng-show="data.imagesActive" class="test" >
                 <img ng-click="showImage(image)" class="thumbnail" ng-src="{{image}}" />
             </div>
-            <div ng-repeat="thumbnail in data.videoThumbs" ng-show=" data.videosActive" class="test" >
+            <div ng-repeat="thumbnail in data.videoThumbs track by $index" ng-show=" data.videosActive" class="test" >
                 <img ng-click="playVideo($index)" class="thumbnail" ng-src="{{thumbnail}}" />
             </div>
         </div>
@@ -73,7 +73,7 @@
                 <img class="mainImage" ng-src="{{data.selectedImage}}" />
             </div>
             <div  ng-show="data.videosActive" class="viewVideo">
-                <iframe ng-src="{{data.selectedVideo | trustAsResourceUrl}}" sandbox="allow-scripts">
+                <iframe ng-src="{{data.selectedVideo | trustAsResourceUrl}}" sandbox="allow-scripts allow-same-origin">
 
                 </iframe>
             </div>

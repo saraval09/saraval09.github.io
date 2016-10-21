@@ -24,28 +24,31 @@ app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
             'img/img4_preview.jpg', 'img/img5_preview.jpg', 'img/img6_preview.jpg'
         ],
         videos: ['http://www.youtube.com/embed/SjGZoALjiLQ', 'http://www.youtube.com/embed/emel6lFmYPI'],
-        videoThumbs: ['img/video_1.jpg'],
+        videoThumbs: ['img/video_1.jpg', 'img/video_1.jpg'],
         selectedImage: "",
-        selectedVideo:"https://www.youtube.com/embed/SjGZoALjiLQ"
+        selectedVideo: ""
     };
+
+    if ($scope.data.videos.length > 0){
+        $scope.data.selectedVideo = $scope.data.videos[0]
+    }
 
     if ($scope.data.images.length > 0){
         $scope.data.selectedImage = $scope.data.images[0]
     }
-
     $scope.showImage = function(image){
         $scope.data.selectedImage = image
 
     };
     $scope.playVideo = function(index){
-        $scope.data.selectedVideo = $sce.trustAsResourceUrl($scope.data.videos[index])
+        $scope.data.selectedVideo = $sce.trustAsResourceUrl($scope.data.videos[index]).toString();
     };
     }]);
 
 
         app.filter('trustAsResourceUrl', ['$sce', function($sce) {
             return function(val) {
-                return $sce.trustAsResourceUrl(val);
+                return $sce.trustAsResourceUrl(val.toString());
             };
         }]);
 
