@@ -3,6 +3,9 @@
 var app = angular.module('ericWebApp', [
     'ngRoute'
 ]);
+
+    /** Navigation Bar **/
+
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
@@ -15,21 +18,29 @@ app.config(['$routeProvider', function ($routeProvider) {
         .otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
 
-    /**Images**/
+    /** Images and Videos **/
 
 app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
-        $scope.greeting = 'Hola!';
     $scope.data={
+
+        /** Main Images **/
         images: ['img/img1_preview.jpg', 'img/img2_preview.jpg', 'img/img3_preview.jpg',
             'img/img4_preview.jpg', 'img/img5_preview.jpg', 'img/img6_preview.jpg'
         ],
+
+        /** Main Videos **/
         videos: ['http://www.youtube.com/embed/SjGZoALjiLQ', 'http://www.youtube.com/embed/emel6lFmYPI', 'http://www.youtube.com/embed/SYAojqkcYzw',
         'http://www.youtube.com/embed/y6HgGV0QhlE', 'http://www.youtube.com/embed/Zs3qY0wts1c', 'http://www.youtube.com/embed/-L1FpZ6gprI'],
+
+        /** Video Thumbnails **/
         videoThumbs: ['img/video_1.jpg', 'img/video_2.jpg','img/video_3.jpg', 'img/video_4.jpg', 'img/video_5.jpg', 'img/video_6.jpg'],
+
+        /** Selected Video and Image **/
         selectedImage: "",
         selectedVideo: ""
     };
 
+    /** If the video selected is greater than 0 in the array select the  **/
     if ($scope.data.videos.length > 0){
         $scope.data.selectedVideo = $scope.data.videos[0]
     }
@@ -46,6 +57,7 @@ app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
     };
     }]);
 
+    /**Filter to make the video page work properly**/
 
         app.filter('trustAsResourceUrl', ['$sce', function($sce) {
             return function(val) {
@@ -77,31 +89,6 @@ app.directive('googleMap', function () {
 })(google);
 
 
-
-/**Images**/
-jQuery(document).ready(function($) {
-
-    $('#myCarousel').carousel({
-        interval: 5000
-    });
-
-    //Handles the carousel thumbnails
-    $( '[id^=carousel-selector-]').on('click', function () {
-        var id_selector = $(this).attr("id");
-        try {
-            var id = /-(\d+)$/.exec(id_selector)[1];
-            console.log(id_selector, id);
-            jQuery('#myCarousel').carousel(parseInt(id));
-        } catch (e) {
-            console.log('Regex failed!', e);
-        }
-    });
-    // When the carousel slides, auto update the text
-    $('#myCarousel').on('slid.bs.carousel', function (e) {
-        var id = $('.item.active').data('slide-number');
-        $('#carousel-text').html($('#slide-content-'+id).html());
-    });
-});
 
 
 

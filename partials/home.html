@@ -1,3 +1,5 @@
+
+<!--==== Nav Bar and Header ====-->
 <header class="clearfix">
     <h1><strong>Eric</strong></h1>
     <h1 id="val">Val</h1>
@@ -18,6 +20,7 @@
     </nav>
 </header>
 
+<!--==== Home Page ====-->
 
 <main ng-class="{'static': data.imagesActive || data.videosActive}">
     <section id="updates">
@@ -29,13 +32,13 @@
         </ul>
     </section>
 
-
+    <!--==== Music Player ====-->
     <section id="music">
-
-        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/264471992&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;buying=false"></iframe>
-
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/264471992&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;buying=false">
+        </iframe>
     </section>
 
+    <!--==== Upcoming Shows ====-->
 
     <section id="shows">
         <h2>Upcoming Shows:</h2>
@@ -46,38 +49,55 @@
             <li><strong>The Mill Tavern Bar & Restaurant</strong> 12/12/2016</li>
         </ul>
     </section>
+
+    <!--==== Google Map ====-->
     <section id="allMap">
     <h2>Map To The Shows</h2>
         <div google-map></div>
-[
     </section>
+
+    <!--==== Video on Home Page ====-->
     <article>
         <iframe width="640" height="360"
                 src="http://www.youtube.com/embed/SjGZoALjiLQ">
         </iframe>
     </article>
 
+    <!--==== Image and Video Modal ====-->
+
     <div class="modalize" ng-show="data.imagesActive || data.videosActive">
+
+        <!--==== Thumbnail Wrapper ====-->
         <div class="thumbWrapper">
+            <!--==== Close Button ====-->
             <div class="glyphicon glyphicon-remove-circle close"
                  ng-click="data.imagesActive = data.videosActive = false; "></div>
+
+            <!--==== Image Thumbnails ====-->
             <div ng-repeat="image in data.images" ng-show="data.imagesActive" class="test" >
                 <img ng-click="showImage(image)" class="thumbnail" ng-src="{{image}}" />
             </div>
+
+            <!--==== Video Thumbnails ====-->
             <div ng-repeat="thumbnail in data.videoThumbs track by $index" ng-show=" data.videosActive" class="test" >
                 <img ng-click="playVideo($index)" class="thumbnail" ng-src="{{thumbnail}}" />
             </div>
         </div>
+
+        <!--==== Main Image and Video Wrapper ====-->
         <div class="preview">
+
+            <!--==== Main Image ====-->
             <div  ng-show="data.imagesActive" class="viewImage">
                 <img class="mainImage" ng-src="{{data.selectedImage}}" />
             </div>
-            <div  ng-show="data.videosActive" class="viewVideo">
-                <iframe ng-src="{{data.selectedVideo | trustAsResourceUrl}}" sandbox="allow-scripts allow-same-origin">
 
+            <!--==== Main Video ====-->
+            <div  ng-show="data.videosActive" class="viewVideo">
+                <iframe
+                        ng-src="{{data.selectedVideo | trustAsResourceUrl}}" sandbox="allow-scripts allow-same-origin">
                 </iframe>
             </div>
         </div>
     </div>
-
 </main>
