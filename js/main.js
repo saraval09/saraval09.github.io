@@ -26,7 +26,7 @@ app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
         videos: ['http://www.youtube.com/embed/SjGZoALjiLQ', 'http://www.youtube.com/embed/emel6lFmYPI'],
         videoThumbs: ['img/video_1.jpg'],
         selectedImage: "",
-        selectedVideo:"http://www.youtube.com/embed/SjGZoALjiLQ"
+        selectedVideo:"https://www.youtube.com/embed/SjGZoALjiLQ"
     };
 
     if ($scope.data.images.length > 0){
@@ -41,6 +41,13 @@ app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
         $scope.data.selectedVideo = $sce.trustAsResourceUrl($scope.data.videos[index])
     };
     }]);
+
+
+        app.filter('trustAsResourceUrl', ['$sce', function($sce) {
+            return function(val) {
+                return $sce.trustAsResourceUrl(val);
+            };
+        }]);
 
 /**Google Map**/
 app.directive('googleMap', function () {

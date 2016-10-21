@@ -73,7 +73,7 @@
                 <img class="mainImage" ng-src="{{data.selectedImage}}" />
             </div>
             <div  ng-show="data.videosActive" class="viewVideo">
-                <iframe ng-src="{{data.selectedVideo}}">
+                <iframe ng-src="{{data.selectedVideo | trustAsResourceUrl}}" sandbox="allow-scripts">
 
                 </iframe>
             </div>
