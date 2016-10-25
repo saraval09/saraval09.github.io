@@ -16,6 +16,15 @@ app.config(['$routeProvider', function ($routeProvider) {
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
+    /** Header **/
+    app.directive('header', function () {
+        return {
+            restrict: 'A',
+            replace: true,
+            scope: {user: '='},
+            templateUrl: "../templates/header.html"
+        }
+    });
 
     /** Footer **/
     app.directive('footer', function () {
@@ -26,15 +35,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         }
     });
 
-    /** Header **/
-    app.directive('header', function () {
-        return {
-            restrict: 'A',
-            replace: true,
-            scope: {user: '='},
-            templateUrl: "../templates/header.html"
-        }
-    });
+
 
     /** Images and Videos **/
 
