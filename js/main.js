@@ -21,8 +21,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         return {
             restrict: 'A',
             replace: true,
-            // scope: {user: '='},
-            templateUrl: "../templates/header.html"
+            scope: {user: '='},
+            templateUrl: "templates/header.html"
         }
     });
 
@@ -31,7 +31,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         return {
             restrict: 'A',
             replace: true,
-            templateUrl: "../templates/footer.html"
+            templateUrl: "templates/footer.html"
         }
     });
 
