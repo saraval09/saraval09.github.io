@@ -21,7 +21,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         return {
             restrict: 'A',
             replace: true,
-            scope: {user: '='},
+            // scope: {user: '='},
             templateUrl: "../templates/header.html"
         }
     });
