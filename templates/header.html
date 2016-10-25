@@ -21,39 +21,38 @@
 
 <!--==== Image and Video Modal ====-->
 
-<!--
 <div class="modalize" ng-show="data.imagesActive || data.videosActive">
 
-    &lt;!&ndash;==== Thumbnail Wrapper ====&ndash;&gt;
+    <!--==== Thumbnail Wrapper ====-->
     <div class="thumbWrapper">
-        &lt;!&ndash;==== Close Button ====&ndash;&gt;
+        <!--==== Close Button ====-->
         <div class="glyphicon glyphicon-remove-circle close"
              ng-click="data.imagesActive = data.videosActive = false; "></div>
 
-        &lt;!&ndash;==== Image Thumbnails ====&ndash;&gt;
+        <!--==== Image Thumbnails ====-->
         <div ng-repeat="image in data.images" ng-show="data.imagesActive" class="test" >
             <img ng-click="showImage(image)" class="thumbnail" ng-src="{{image}}" />
         </div>
 
-        &lt;!&ndash;==== Video Thumbnails ====&ndash;&gt;
+        <!--==== Video Thumbnails ====-->
         <div ng-repeat="thumbnail in data.videoThumbs track by $index" ng-show=" data.videosActive" class="test" >
             <img ng-click="playVideo($index)" class="thumbnail" ng-src="{{thumbnail}}" />
         </div>
     </div>
 
-    &lt;!&ndash;==== Main Image and Video Wrapper ====&ndash;&gt;
+    <!--==== Main Image and Video Wrapper ====-->
     <div class="preview">
 
-        &lt;!&ndash;==== Main Image ====&ndash;&gt;
+        <!--==== Main Image ====-->
         <div  ng-show="data.imagesActive" class="viewImage">
             <img class="mainImage" ng-src="{{data.selectedImage}}" />
         </div>
 
-        &lt;!&ndash;==== Main Video ====&ndash;&gt;
+        <!--==== Main Video ====-->
         <div  ng-show="data.videosActive" class="viewVideo">
             <iframe
                     ng-src="{{data.selectedVideo | trustAsResourceUrl}}" sandbox="allow-scripts allow-same-origin">
             </iframe>
         </div>
     </div>
-</div>-->
+</div>
