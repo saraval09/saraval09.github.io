@@ -31,10 +31,11 @@ header, main{
 }
 
 main{
-    background-image: url("../img/bg2.png");
+    background-image: url("../img/bg.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    /*background-color: #931100;*/
     padding: 10px;
 
 }
@@ -220,6 +221,14 @@ iframe{
     font-size: 2em;
 }
 
+.test .title{
+    color: white;
+    margin-top: -19px;
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+}
+
 /*****  Images ****************/
 .hide-bullets {
     list-style:none;
@@ -238,6 +247,8 @@ iframe{
 
 .test{
     margin-top: 20px;
+    position: relative;
+    height:125px;
 }
 
 .test img{
@@ -294,10 +305,11 @@ main.static{
 }
 
 .close{
-    position: absolute;
+    position: fixed;
     top: 15px;
     right:15px;
     color: white;
+    z-index: 2;
 }
 /*****  Bio ****************/
 

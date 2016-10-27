@@ -9,7 +9,7 @@ var app = angular.module('ericWebApp', [
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
-        .when("/", {templateUrl: "partials/home.html", controller: 'homeController'})
+        .when("/", {templateUrl: "partials/home.html"})
         // Pages
         .when("/bio", {templateUrl: "partials/bio.html"})
         .when("/contact", {templateUrl: "partials/contact.html"})
@@ -19,10 +19,11 @@ app.config(['$routeProvider', function ($routeProvider) {
     /** Header **/
     app.directive('header', function () {
         return {
-            restrict: 'A',
+            restrict: 'E',
             replace: true,
-            scope: {user: '='},
-            templateUrl: "templates/header.html"
+            // scope: {user: '='},
+            templateUrl: "/templates/header.html",
+            controller: 'headerController'
         }
     });
 
@@ -39,7 +40,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     /** Images and Videos **/
 
-app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
+app.controller('headerController', ['$scope','$sce', function($scope,$sce) {
     $scope.data={
 
         /** Main Images **/
@@ -54,12 +55,14 @@ app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
         /** Video Thumbnails **/
         videoThumbs: ['img/video_1.jpg', 'img/video_2.jpg','img/video_3.jpg', 'img/video_4.jpg', 'img/video_5.jpg', 'img/video_6.jpg'],
 
+        /** Video Names **/
+        videoNames: ['Beautiful Lie', 'Pull Me Under', 'High Above You', 'If You Only Knew', 'Beauty Queen', 'Signs'],
         /** Selected Video and Image **/
         selectedImage: "",
         selectedVideo: ""
     };
 
-    /** If the video selected is greater than 0 in the array select the  **/
+    /**   **/
     if ($scope.data.videos.length > 0){
         $scope.data.selectedVideo = $scope.data.videos[0]
     }
@@ -80,7 +83,9 @@ app.controller('homeController', ['$scope','$sce', function($scope,$sce) {
 
         app.filter('trustAsResourceUrl', ['$sce', function($sce) {
             return function(val) {
-                return $sce.trustAsResourceUrl(val.toString());
+                if(val){
+                    return $sce.trustAsResourceUrl(val.toString());
+                }
             };
         }]);
 
@@ -96,20 +101,24 @@ app.directive('googleMap', function () {
 
             var mapOptions = {
                 zoom: 10,
-                center: new google.maps.LatLng(41.1725694, -76.8663396),
+                center: new google.maps.LatLng(41.2426819, -76.7247813),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
             $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            initialize();
         }
     }
 
 });
 })(google);
 
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
+
 function initialize() {
     var mapOptions = {
-        center: {lat: 41.1725694, lng: -76.8663396},
+        center: {lat: 41.2426819, lng: -76.7247813},
         zoom: 10,
         scrollwheel: false
     };
@@ -121,22 +130,44 @@ function initialize() {
 
     // Create the autocomplete helper, and associate it with
     // an HTML text input box.
-    var autocomplete = new google.maps.places.Autocomplete(input);
-    autocomplete.bindTo('bounds', map);
+    /*var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);*/
 
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     var infowindow = new google.maps.InfoWindow();
     var marker = new google.maps.Marker({
-        map: map
+        map: map,
+        position:new google.maps.LatLng(41.2426819, -76.7247813),
+        label: labels[labelIndex++ % labels.length]
     });
+    marker = new google.maps.Marker({
+        map: map,
+        position:new google.maps.LatLng(41.2401443, -77.0543222),
+        label: labels[labelIndex++ % labels.length]
+
+    });
+    marker = new google.maps.Marker({
+        map: map,
+        position:new google.maps.LatLng(41.2114086, -76.7602284),
+        label: labels[labelIndex++ % labels.length]
+
+    });
+    marker = new google.maps.Marker({
+        map: map,
+        position:new google.maps.LatLng(41.2498221, -76.92892),
+        label: labels[labelIndex++ % labels.length]
+
+    });
+    marker.setMap(map);
+
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map, marker);
     });
 
     // Get the full place details when the user selects a place from the
     // list of suggestions.
-    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+   /* google.maps.event.addListener(autocomplete, 'place_changed', function() {
         infowindow.close();
         var place = autocomplete.getPlace();
         if (!place.geometry) {
@@ -151,7 +182,7 @@ function initialize() {
         }
 
         // Set the position of the marker using the place ID and location.
-        marker.setPlace(/** @type {!google.maps.Place} */ ({
+        marker.setPlace(/!** @type {!google.maps.Place} **!/ ({
             placeId: place.place_id,
             location: place.geometry.location
         }));
@@ -162,7 +193,7 @@ function initialize() {
             place.formatted_address + '</div>');
         infowindow.open(map, marker);
     });
-}
+*/}
 
 var x = document.getElementById("demo");
 function getLocation() {

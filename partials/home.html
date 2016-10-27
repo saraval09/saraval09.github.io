@@ -1,25 +1,3 @@
-
-<!--==== Nav Bar and Header ====-->
-<header class="clearfix">
-    <h1><strong>Eric</strong></h1>
-    <h1 id="val">Val</h1>
-    <h2 id="official">Official Website</h2>
-    <nav >
-        <ul>
-            <li><a href="/#/">Home</a></li>
-            <li><a href="/#/bio">Bio</a></li>
-            <li class="dropdown">Gallery
-                <ul class="dropdown-content"  style="list-style-type:none">
-                    <li ng-click="data.imagesActive=true" class="link">Images</li>
-                    <li ng-click="data.videosActive=true" class="link">Videos</li>
-                </ul>
-
-            </li>
-            <li><a href="/#/contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
 <!--==== Home Page ====-->
 
 <main ng-class="{'static': data.imagesActive || data.videosActive}">
@@ -45,10 +23,10 @@
     <section id="shows">
         <h2>Upcoming Shows:</h2>
         <ul>
-            <li><strong>The Spartan Pub</strong> 11/7/2016</li>
-            <li><strong>Riepstine's Pub</strong> 11/21/2016</li>
-            <li><strong>Hull's Landing</strong> 12/4/2016</li>
-            <li><strong>The Mill Tavern Bar & Restaurant</strong> 12/12/2016</li>
+            <li>The Spartan Pub 11/7/2016</li>
+            <li>Riepstine's Pub 11/21/2016</li>
+            <li>Hull's Landing 12/4/2016</li>
+            <li>The Mill Tavern Bar & Restaurant 12/12/2016</li>
         </ul>
     </section>
 
