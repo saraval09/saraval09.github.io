@@ -113,10 +113,22 @@ app.directive('googleMap', function () {
 });
 })(google);
 
-var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var labelIndex = 0;
+
 
 function initialize() {
+    var labelIndex = 0;
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var markers=[
+        ['The Spartan Pub', 41.2426819, -76.7247813],
+        ['Riepstines Pub', 41.2401443, -77.0543222 ],
+        ['Hulls Landing', 41.2114086, -76.7602284],
+        ['The Mill Tavern Bar & Restaurant', 41.2498221, -76.92892 ]
+    ];
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+    var label;
+    var bounds = new google.maps.LatLngBounds();
+
     var mapOptions = {
         center: {lat: 41.2426819, lng: -76.7247813},
         zoom: 10,
@@ -128,85 +140,28 @@ function initialize() {
     var input = /** @type {HTMLInputElement} */(
         document.getElementById('pac-input'));
 
-    // Create the autocomplete helper, and associate it with
-    // an HTML text input box.
-    /*var autocomplete = new google.maps.places.Autocomplete(input);
-    autocomplete.bindTo('bounds', map);*/
-
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    var infowindow = new google.maps.InfoWindow();
-    var marker = new google.maps.Marker({
-        map: map,
-        position:new google.maps.LatLng(41.2426819, -76.7247813),
-        label: labels[labelIndex++ % labels.length]
-    });
-    marker = new google.maps.Marker({
-        map: map,
-        position:new google.maps.LatLng(41.2401443, -77.0543222),
-        label: labels[labelIndex++ % labels.length]
-
-    });
-    marker = new google.maps.Marker({
-        map: map,
-        position:new google.maps.LatLng(41.2114086, -76.7602284),
-        label: labels[labelIndex++ % labels.length]
-
-    });
-    marker = new google.maps.Marker({
-        map: map,
-        position:new google.maps.LatLng(41.2498221, -76.92892),
-        label: labels[labelIndex++ % labels.length]
-
-    });
+    for (i = 0; i < markers.length; i++) {
+        var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(pos);
+        marker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            label:labels[labelIndex++ % labels.length]
+        });
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(markers[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+    map.fitBounds(bounds);
     marker.setMap(map);
-
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map, marker);
     });
-
-    // Get the full place details when the user selects a place from the
-    // list of suggestions.
-   /* google.maps.event.addListener(autocomplete, 'place_changed', function() {
-        infowindow.close();
-        var place = autocomplete.getPlace();
-        if (!place.geometry) {
-            return;
-        }
-
-        if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
-        } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(17);
-        }
-
-        // Set the position of the marker using the place ID and location.
-        marker.setPlace(/!** @type {!google.maps.Place} **!/ ({
-            placeId: place.place_id,
-            location: place.geometry.location
-        }));
-        marker.setVisible(true);
-
-        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-            'Place ID: ' + place.place_id + '<br>' +
-            place.formatted_address + '</div>');
-        infowindow.open(map, marker);
-    });
-*/}
-
-var x = document.getElementById("demo");
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-    console.log('This is your location ' + showPosition());
 }
 
 // Run the initialize function when the window has finished loading.
