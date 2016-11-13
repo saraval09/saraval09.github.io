@@ -5,7 +5,6 @@ var app = angular.module('ericWebApp', [
 ]);
 
     /** Navigation Bar **/
-
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     // Home
@@ -16,6 +15,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html"});
 }]);
+
     /** Header **/
     app.directive('header', function () {
         return {
@@ -37,39 +37,43 @@ app.config(['$routeProvider', function ($routeProvider) {
     });
 
 
-
     /** Images and Videos **/
-
-app.controller('headerController', ['$scope','$sce', function($scope,$sce) {
+app.controller('headerController', ['$scope','$sce','$http', function($scope,$sce,$http) {
     $scope.data={
-
         /** Main Images **/
-        images: ['img/img1_preview.jpg', 'img/img2_preview.jpg', 'img/img3_preview.jpg',
-            'img/img4_preview.jpg', 'img/img5_preview.jpg', 'img/img6_preview.jpg'
-        ],
-
+        images: [],
         /** Main Videos **/
-        videos: ['http://www.youtube.com/embed/SjGZoALjiLQ', 'http://www.youtube.com/embed/emel6lFmYPI', 'http://www.youtube.com/embed/SYAojqkcYzw',
-        'http://www.youtube.com/embed/y6HgGV0QhlE', 'http://www.youtube.com/embed/Zs3qY0wts1c', 'http://www.youtube.com/embed/-L1FpZ6gprI'],
-
+        videosUrl: [],
         /** Video Thumbnails **/
-        videoThumbs: ['img/video_1.jpg', 'img/video_2.jpg','img/video_3.jpg', 'img/video_4.jpg', 'img/video_5.jpg', 'img/video_6.jpg'],
-
+        videoThumbs: [],
         /** Video Names **/
-        videoNames: ['Beautiful Lie', 'Pull Me Under', 'High Above You', 'If You Only Knew', 'Beauty Queen', 'Signs'],
+        videosTitle: [],
         /** Selected Video and Image **/
         selectedImage: "",
         selectedVideo: ""
     };
 
-    /**   **/
-    if ($scope.data.videos.length > 0){
-        $scope.data.selectedVideo = $scope.data.videos[0]
-    }
+    $http.get("php/datacall.php")
+        .then(function (response) {
+            response.data.result.image.forEach(function(element) {
+               $scope.data.images.push('img/' + element.fileName);
+            });
 
-    if ($scope.data.images.length > 0){
-        $scope.data.selectedImage = $scope.data.images[0]
-    }
+            if ($scope.data.images.length > 0){
+                $scope.data.selectedImage = $scope.data.images[0]
+            }
+
+            response.data.result.video.forEach(function(element) {
+                $scope.data.videoThumbs.push('img/' + element.thumbnails);
+                $scope.data.videosUrl.push(element.url);
+                $scope.data.videosTitle.push(element.title);
+            });
+
+            if ($scope.data.videosUrl.length > 0){
+                $scope.data.selectedVideo = $scope.data.videosUrl[0]
+            }
+        });
+
     $scope.showImage = function(image){
         $scope.data.selectedImage = image
 
@@ -88,6 +92,7 @@ app.controller('headerController', ['$scope','$sce', function($scope,$sce) {
                 }
             };
         }]);
+
 
 /**Google Map**/
 app.directive('googleMap', function () {
@@ -114,7 +119,6 @@ app.directive('googleMap', function () {
 })(google);
 
 
-
 function initialize() {
     var labelIndex = 0;
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -124,6 +128,7 @@ function initialize() {
         ['Hulls Landing', 41.2114086, -76.7602284],
         ['The Mill Tavern Bar & Restaurant', 41.2498221, -76.92892 ]
     ];
+    var geocoder = new google.maps.Geocoder;
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
     var label;
@@ -159,6 +164,10 @@ function initialize() {
     }
     map.fitBounds(bounds);
     marker.setMap(map);
+
+/*    document.getElementById('submit').addEventListener('click', function() {
+        geocodeLatLng(geocoder, map, infowindow);
+    });*/
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map, marker);
     });

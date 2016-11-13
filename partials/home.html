@@ -1,16 +1,4 @@
-<!--==== Home Page ====-->
-
 <main ng-class="{'static': data.imagesActive || data.videosActive}">
-
-    <!--==== Updates ====-->
-    <section id="updates">
-        <h2>Updates:</h2>
-        <ul>
-            <li>New single <i>Beautiful Lie</i> is out now!</li>
-            <li>Check out the new music video below! </li>
-            <li>Eric will be performing next week!<br> Check out his upcoming shows.</li>
-        </ul>
-    </section>
 
     <!--==== Music Player ====-->
     <section id="music">
@@ -19,71 +7,31 @@
     </section>
 
     <!--==== Upcoming Shows ====-->
-
     <section id="shows">
         <h2>Upcoming Shows:</h2>
-        <ul>
-            <li>The Spartan Pub 11/7/2016</li>
-            <li>Riepstine's Pub 11/21/2016</li>
-            <li>Hull's Landing 12/4/2016</li>
-            <li>The Mill Tavern Bar & Restaurant 12/12/2016</li>
+        <ul class="showList">
+            <li><div class="numberCircle">A</div><div class="showTitle">The Spartan Pub 11/7/2016</div></li>
+            <li><div class="numberCircle">B</div><div class="showTitle">Riepstine's Pub 11/21/2016</div></li>
+            <li><div class="numberCircle">C</div><div class="showTitle">Hull's Landing 12/4/2016</div></li>
+            <li><div class="numberCircle">D</div><div class="showTitle">The Mill Tavern Bar & Restaurant 12/12/2016</div></li>
         </ul>
     </section>
 
     <!--==== Google Map ====-->
     <section id="allMap">
-    <h2>Map To The Shows</h2>
+        <h2>Map To The Shows</h2>
         <div google-map></div>
     </section>
 
+</main> <!--==== End of container ====-->
 
 
-    <!--==== Image and Video Modal ====-->
-
-    <div class="modalize" ng-show="data.imagesActive || data.videosActive">
-
-        <!--==== Thumbnail Wrapper ====-->
-        <div class="thumbWrapper">
-            <!--==== Close Button ====-->
-            <div class="glyphicon glyphicon-remove-circle close"
-                 ng-click="data.imagesActive = data.videosActive = false; "></div>
-
-            <!--==== Image Thumbnails ====-->
-            <div ng-repeat="image in data.images" ng-show="data.imagesActive" class="test" >
-                <img ng-click="showImage(image)" class="thumbnail" ng-src="{{image}}" />
-            </div>
-
-            <!--==== Video Thumbnails ====-->
-            <div ng-repeat="thumbnail in data.videoThumbs track by $index" ng-show=" data.videosActive" class="test" >
-                <img ng-click="playVideo($index)" class="thumbnail" ng-src="{{thumbnail}}" />
-            </div>
-        </div>
-
-        <!--==== Main Image and Video Wrapper ====-->
-        <div class="preview">
-
-            <!--==== Main Image ====-->
-            <div  ng-show="data.imagesActive" class="viewImage">
-                <img class="mainImage" ng-src="{{data.selectedImage}}" />
-            </div>
-
-            <!--==== Main Video ====-->
-            <div  ng-show="data.videosActive" class="viewVideo">
-                <iframe
-                        ng-src="{{data.selectedVideo | trustAsResourceUrl}}" sandbox="allow-scripts allow-same-origin">
-                </iframe>
-            </div>
-        </div>
-    </div>
-</main>
-
+<!--==== Google Analytics ====-->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-86429079-1', 'auto');
     ga('send', 'pageview');
-
 </script>

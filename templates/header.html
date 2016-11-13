@@ -1,7 +1,6 @@
 <div>
     <div class="clearfix">
-        <h1><strong>Eric</strong></h1>
-        <h1 id="val">Val</h1>
+        <img class="ev" src="../img/ev.svg" alt="Eric Val Header">
         <h2 id="official">Official Website</h2>
         <nav >
             <ul>
@@ -18,8 +17,8 @@
         </nav>
     </div>
 
+    
     <!--==== Image and Video Modal ====-->
-
 
     <div class="modalize" ng-show="data.imagesActive || data.videosActive">
 
@@ -37,7 +36,7 @@
             <!--==== Video Thumbnails ====-->
             <div ng-repeat="thumbnail in data.videoThumbs track by $index" ng-show="data.videosActive" class="test" >
                 <img ng-click="playVideo($index)" class="thumbnail" ng-src="{{thumbnail}}" />
-                <div class="title">{{data.videoNames[$index]}}</div>
+                <div class="title">{{data.videosTitle[$index]}}</div>
             </div>
         </div>
 
