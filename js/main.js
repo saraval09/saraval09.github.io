@@ -39,6 +39,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     /** Images and Videos **/
 app.controller('headerController', ['$scope','$sce','$http', function($scope,$sce,$http) {
+    $scope.labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $scope.data={
         /** Main Images **/
         images: [],
@@ -50,8 +51,10 @@ app.controller('headerController', ['$scope','$sce','$http', function($scope,$sc
         videosTitle: [],
         /** Selected Video and Image **/
         selectedImage: "",
-        selectedVideo: ""
+        selectedVideo: "",
+        maps: []
     };
+
 
     $http.get("php/datacall.php")
         .then(function (response) {
@@ -72,6 +75,8 @@ app.controller('headerController', ['$scope','$sce','$http', function($scope,$sc
             if ($scope.data.videosUrl.length > 0){
                 $scope.data.selectedVideo = $scope.data.videosUrl[0]
             }
+            $scope.data.maps = response.data.result.map;
+
         });
 
     $scope.showImage = function(image){
@@ -81,6 +86,7 @@ app.controller('headerController', ['$scope','$sce','$http', function($scope,$sc
     $scope.playVideo = function(index){
         $scope.data.selectedVideo = $sce.trustAsResourceUrl($scope.data.videos[index]).toString();
     };
+
     }]);
 
     /**Filter to make the video page work properly**/
@@ -94,24 +100,33 @@ app.controller('headerController', ['$scope','$sce','$http', function($scope,$sc
         }]);
 
 
+
 /**Google Map**/
 app.directive('googleMap', function () {
+
     return {
 
         restrict: 'AE',
 
         template: '<div id="map"></div>',
 
-        controller: function ($scope) {
+        controller: function ($scope, $http) {
 
             var mapOptions = {
                 zoom: 10,
                 center: new google.maps.LatLng(41.2426819, -76.7247813),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
+            $scope.maps=[];
+
+            $http.get("php/datacall.php")
+                .then(function (response) {
+                    $scope.maps = response.data.result.map;
+                    initialize(null, $scope.maps);
+                });
 
             $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-            initialize();
+
         }
     }
 
@@ -119,15 +134,25 @@ app.directive('googleMap', function () {
 })(google);
 
 
-function initialize() {
+function initialize(event, maps) {
     var labelIndex = 0;
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var markers=[
-        ['The Spartan Pub', 41.2426819, -76.7247813],
-        ['Riepstines Pub', 41.2401443, -77.0543222 ],
-        ['Hulls Landing', 41.2114086, -76.7602284],
-        ['The Mill Tavern Bar & Restaurant', 41.2498221, -76.92892 ]
+    /*    ['<b>The Spartan Pub</b> <br> 104 N Main St, Hughesville, PA 17737 <br> <a href="https://goo.gl/maps/dBCpkBUGyGR2">Directions</a>', 41.2426819, -76.7247813],
+        ['<b>Riepstines Pub</b> <br> 913 Arch St, Williamsport, PA 17701 <br> <a href="https://goo.gl/maps/DcYJbD5qEf62">Directions</a>', 41.2401443, -77.0543222 ],
+        ['<b>Hulls Landing</b> <br> 27 PA-442, Muncy, PA 17756 <br><a' +
+        ' href="https://goo.gl/maps/yfjyhye4MSS2">Directions</a><br><a' +
+        ' href="http://www.hullslanding.com/">Visit' +
+        ' Site' +
+        ' </a>', 41.2114086, -76.7602284],
+        ['<b>The Mill Tavern Bar & Restaurant</b> <br> 319 Broad St, Montoursville, PA 17754 <br> <a href="https://goo.gl/maps/aAnh4XrXsV52">Directions</a>', 41.2498221, -76.92892 ]*/
     ];
+
+    maps.forEach(function(element){
+        markers.push(['<b>' + element.name + '</b><br>' + element.address + '<br><a href="' + element.directions +
+        '">Directions</a><br><a href="' + element.site + '">Visit Site</a>', element.lat, element.long])
+    });
+
     var geocoder = new google.maps.Geocoder;
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
@@ -153,7 +178,7 @@ function initialize() {
         marker = new google.maps.Marker({
             position: pos,
             map: map,
-            label:labels[labelIndex++ % labels.length]
+            label: labels[labelIndex++ % labels.length]
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
@@ -172,9 +197,3 @@ function initialize() {
         infowindow.open(map, marker);
     });
 }
-
-// Run the initialize function when the window has finished loading.
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
-

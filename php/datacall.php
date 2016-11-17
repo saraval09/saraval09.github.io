@@ -11,7 +11,7 @@ if (!$mysql)
     die("mysqli_init failed");
 }
 
-if (!mysqli_real_connect($mysql,"ericvalmusic.com",$user,$pass,"EricValMusic"))
+if (!mysqli_real_connect($mysql,"localhost",$user,$pass,"EricValMusic"))
 {
     die("Connect Error: " . mysqli_connect_error());
 }
@@ -45,6 +45,24 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
 }
 
 $outVideo ='"video":['.$outp.']';
-$outp ='{"result": {'.$outVideo.', '.$outImages.'}}';
+
+
+
+
+$result = $mysql->query("select * from map");
+$outp = "";
+while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+    if ($outp != "") {$outp .= ",";}
+    $outp .= '{"lat":"'  . $rs["lat"] . '",';
+    $outp .= '"name":"'  . $rs["name"] . '",';
+    $outp .= '"address":"'  . $rs["address"] . '",';
+    $outp .= '"directions":"'  . $rs["directions"] . '",';
+    $outp .= '"site":"'  . $rs["site"] . '",';
+    $outp .= '"date":"'  . $rs["date"] . '",';
+    $outp .= '"long":"'  . $rs["long"] . '"}';
+}
+
+$outMap ='"map":['.$outp.']';
+$outp ='{"result": {'.$outVideo.', '.$outImages.', '.$outMap.'}}';
 echo($outp);
 ?>

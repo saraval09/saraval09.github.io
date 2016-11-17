@@ -47,7 +47,7 @@ main{
 }
 h2{
     text-align: left;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #931100;
     font-weight: lighter;
 }
@@ -71,7 +71,6 @@ nav{
     display: block;
     overflow: hidden;
     width: 100%;
-    background-color: #ffffff;
 }
 
 nav> ul> li{
@@ -108,11 +107,12 @@ nav> ul> li> a{
     padding: 0 10px;
 }
 .dropdown-content {
-    padding: 5px 10px;
+    padding: 5px 4px;
     display: none;
     position: relative;
     min-width: 10px;
     font-size: .8em;
+    background-color: white;
 }
 
 /* Links inside the dropdown */
@@ -135,6 +135,10 @@ nav> ul> li> a{
 /***** Music ****************/
 #music{
     text-align: center;
+}
+
+#music>iframe{
+    margin: 25px;
 }
 
 /***** Upcoming Shows ****************/
@@ -166,14 +170,13 @@ section> ul> li{
 }
 
 #shows{
-    position: absolute;
-    left: 100px;
-    top:560px;
-    margin: 10px auto;
-    padding: 20px;
+    position: relative;
+    left: 0;
     width: 500px;
     color: #000000;
     text-align: left;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .showList{
@@ -190,11 +193,38 @@ section> ul> li{
 
 #allMap{
     width: 700px;
-    float: right;
+    margin-bottom: 30px;
+    display: inline-block;
+    vertical-align: top;
 
 }
 
 /*****  Videos ****************/
+
+#videoOne{
+    position: absolute;
+    top:550px;
+    left:70px;
+    width:565px;
+
+}
+
+#videoTwo{
+    position: absolute;
+    top:550px;
+    right:77px;
+    width:565px;
+
+}
+
+#mainVideos{
+    margin: 50px;
+    height: 300px;
+}
+
+#mainVideos>iframe{
+    margin: 0 auto;
+}
 
 iframe{
     margin: 50px 150px;
@@ -270,7 +300,7 @@ iframe{
     transform: translateX(-50%);
     left: 50%;
     position: absolute;
-    top: 50%;
+    top: 400px;
     transform: translate(-50%,-50%);
 }
 
@@ -294,12 +324,32 @@ main.static{
     cursor: pointer;
 }
 
-.close{
+.x{
     position: fixed;
-    top: 15px;
-    right:15px;
-    color: white;
+    top: 10px;
+    right:10px;
+    color: blue;
     z-index: 2;
+    cursor: pointer;
+    padding:10px;
+
+}
+
+.bgX{
+    background: url(../img/x.svg);
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+
+}
+
+svg .cls-1, svg .cls-2{
+    stroke: blue;
+}
+
+.hv:hover{
+    color: red;
+
 }
 /*****  Bio ****************/
 
@@ -321,9 +371,19 @@ main.static{
 
 /*****  Contact Page ****************/
 
+#contactHeader{
+    color: #931100;
+    font-size: 1.5em;
+    font-weight: lighter;
+    position: absolute;
+    top: 125px;
+    left: 255px;
+}
+
 #contact, form{
     margin: 0 auto;
     text-align: center;
+    padding: 25px;
 }
 
 ::-webkit-input-placeholder{
@@ -334,7 +394,7 @@ main.static{
 form input[type=text], input[type=email], input[type=tel]{
     width: 22%;
     height: 10px;
-    margin: 20px;
+    margin: 27px;
     padding: 10px;
 }
 
@@ -346,12 +406,15 @@ textarea{
 #submit{
     width: 10%;
     height: 25px;
+    position: absolute;
+    right: 255px;
+    bottom: -100px;
     background-color: #353a3d;
     color: #ffffff;
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background-color .75s ease;
-    margin-left: 755px;
+    margin-left: 700px;
     border-radius: 25px;
     text-shadow: 1px 1px 1px #8b8b8b;
     text-align: center;
@@ -377,19 +440,20 @@ textarea{
 /***** Footer ****************/
 
 footer{
-    color: #929292;
+    color: #931100;
     font-family: 'open sans',arial,sans-serif;
     font-size: .8em;
     font-weight: 300;
     text-align: center;
     clear: both;
-    padding-top: 40px;
+    margin: 25px;
 }
 
 footer> a{
     display: inline;
     padding: 5px;
 }
+
 
 
 

@@ -6,9 +6,9 @@ if(isset($_POST['email'])) {
 
 
 
-    $email_to = "saraval09@gmail.com";
+    $email_to = "ericval27@yahoo.com";
 
-    $email_subject = "Testing Email";
+    $email_subject = "Eric Val Music";
 
 
 

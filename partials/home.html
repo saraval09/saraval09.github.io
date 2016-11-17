@@ -6,21 +6,36 @@
         </iframe>
     </section>
 
+    <div id="mainVideos">
+        <iframe id="videoOne"
+                src="https://www.youtube.com/embed/SjGZoALjiLQ">
+        </iframe>
+
+        <iframe id="videoTwo"
+                src="https://www.youtube.com/embed/QfKfEI1hOjk">
+        </iframe>
+    </div>
+
     <!--==== Upcoming Shows ====-->
     <section id="shows">
-        <h2>Upcoming Shows:</h2>
+        <h2>Upcoming Shows</h2>
         <ul class="showList">
-            <li><div class="numberCircle">A</div><div class="showTitle">The Spartan Pub 11/7/2016</div></li>
-            <li><div class="numberCircle">B</div><div class="showTitle">Riepstine's Pub 11/21/2016</div></li>
-            <li><div class="numberCircle">C</div><div class="showTitle">Hull's Landing 12/4/2016</div></li>
-            <li><div class="numberCircle">D</div><div class="showTitle">The Mill Tavern Bar & Restaurant 12/12/2016</div></li>
+            <li ng-repeat="item in data.maps"><div class="numberCircle">{{labels[$index]}}</div><div
+                    class="showTitle">{{item.name + " " + item.date}}</div></li>
         </ul>
+     <!--   <ul class="showList">
+            <li><div class="numberCircle">A</div><div class="showTitle">The Spartan Pub 12/7/2016</div></li>
+            <li><div class="numberCircle">B</div><div class="showTitle">Riepstine's Pub 12/21/2016</div></li>
+            <li><div class="numberCircle">C</div><div class="showTitle">Hull's Landing 01/4/2017</div></li>
+            <li><div class="numberCircle">D</div><div class="showTitle">The Mill Tavern Bar & Restaurant
+                01/12/2017</div></li>
+        </ul>-->
     </section>
 
     <!--==== Google Map ====-->
     <section id="allMap">
         <h2>Map To The Shows</h2>
-        <div google-map></div>
+        <google-map></google-map>
     </section>
 
 </main> <!--==== End of container ====-->
