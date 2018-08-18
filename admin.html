@@ -10,63 +10,64 @@
 </head>
 <body>
 <main ng-class="{'static': data.imagesActive || data.videosActive}">
-
     <!--==== Music Player ====-->
     <section id="music">
         <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/264471992&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;buying=false">
         </iframe>
     </section>
-
     <div id="mainVideos">
         <iframe id="videoOne"
                 src="https://www.youtube.com/embed/SjGZoALjiLQ">
         </iframe>
-
         <iframe id="videoTwo"
                 src="https://www.youtube.com/embed/QfKfEI1hOjk">
         </iframe>
     </div>
-
     <!--==== Upcoming Shows ====-->
     <section id="shows">
         <h2>Upcoming Shows</h2>
         <ul class="showList">
-            <li><div class="numberCircle">A</div><div class="showTitle">The Spartan Pub 11/7/2016</div></li>
-            <li><div class="numberCircle">B</div><div class="showTitle">Riepstine's Pub 11/21/2016</div></li>
-            <li><div class="numberCircle">C</div><div class="showTitle">Hull's Landing 12/4/2016</div></li>
-            <li><div class="numberCircle">D</div><div class="showTitle">The Mill Tavern Bar & Restaurant 12/12/2016</div></li>
+            <li>
+                <div class="numberCircle">A</div>
+                <div class="showTitle">The Spartan Pub 11/7/2016</div>
+            </li>
+            <li>
+                <div class="numberCircle">B</div>
+                <div class="showTitle">Riepstine's Pub 11/21/2016</div>
+            </li>
+            <li>
+                <div class="numberCircle">C</div>
+                <div class="showTitle">Hull's Landing 12/4/2016</div>
+            </li>
+            <li>
+                <div class="numberCircle">D</div>
+                <div class="showTitle">The Mill Tavern Bar & Restaurant 12/12/2016</div>
+            </li>
         </ul>
     </section>
-
     <div class="modalize" ng-show="data.imagesActive || data.videosActive">
-
         <!--==== Thumbnail Wrapper ====-->
         <div class="thumbWrapper">
             <!--==== Close Button ====-->
             <div ng-click="data.imagesActive = data.videosActive = false; ">
                 <img class="close" src="../img/x.svg" alt="Exit Button" height="40px" width="40px">
             </div>
-
             <!--==== Image Thumbnails ====-->
             <div ng-repeat="image in data.images" ng-show="data.imagesActive" class="test" >
                 <img ng-click="showImage(image)" class="thumbnail" ng-src="{{image}}" />
             </div>
-
             <!--==== Video Thumbnails ====-->
             <div ng-repeat="thumbnail in data.videoThumbs track by $index" ng-show="data.videosActive" class="test" >
                 <img ng-click="playVideo($index)" class="thumbnail" ng-src="{{thumbnail}}" />
                 <div class="title">{{data.videosTitle[$index]}}</div>
             </div>
         </div>
-
         <!--==== Main Image and Video Wrapper ====-->
         <div class="preview">
-
             <!--==== Main Image ====-->
             <div  ng-show="data.imagesActive" class="viewImage">
                 <img class="mainImage" ng-src="{{data.selectedImage}}" />
             </div>
-
             <!--==== Main Video ====-->
             <div  ng-show="data.videosActive" class="viewVideo">
                 <iframe
@@ -75,42 +76,31 @@
             </div>
         </div>
     </div>
-
     <!--==== Google Map ====-->
     <section id="allMap">
         <h2>Map To The Shows</h2>
         <div google-map></div>
     </section>
-
     <!--==== Bio Pic ====-->
     <article id="bioPic">
         <img src="../img/img6_preview.jpg"  alt="Eric val"/>
     </article>
-
-
     <section class="bio">
         <!--==== Bio Header ====-->
         <h2 class="videoHeader">Biography of Eric Val</h2>
         <!--==== Bio Article ====-->
         <p>“Diverse Music with a Hard Rock Edge,” sums up Eric Val’s music career. Eric is a hard rock solo artist from Williamsport, PA, that was influenced by bands like Sevendust, Shinedown, Godsmack, Stone Sour and Seether. He has a classically trained voice that helps him propel his sound and style far above the rest. His writing style is as unique as his voice. </br>
-
             With the release of the debut album ‘3 Year Struggle’ August 31, 2012, the world got to see what Eric is all about. With 13 original tracks, it is available exclusively at ericvalmusic.com, along with itunes.com, amazon.com, and cdbaby.com. The album demonstrates his diversity, honesty and passion for his music. The first two singles ‘High Above You’ and ‘Pull Me Under’ showcase his pop sensibility. <br>
-
             The next album was released in September 2013 debuting the rock/pop single ‘Beauty Queen’. The album exemplifies a mixture of heavy guitars, groove drumming and smooth vocals. Another single was released, ‘If You Only Knew’, in July of 2014, and comprises a mixture of acoustic guitars, electric solos and fast paced drums.</br>
-
             At this time Eric is currently working on a new single, ‘Beautiful Lie’, and then will begin work on his next album ‘My Gift, My Curse.’
-
             “Working with Eric the past couple of years has shown me his passion to push his project through the business of rejection (a.k.a The Music Business), without ever losing sight of his freedom of expression. He clearly knows the difference between a demo and the persistence it takes to make a record. His attention to the details in his music empowers everyone who listens. The gifts are clearly on the table.”
             Joseph Hauserman, Producer, Drums, and Keyboards </br>
-
             “Eric Val is a pleasure to work with in the studio--he drops ego at the door; and carries in only his passionate dedication to the craft of singing and songwriting.”
             Richard Rupert, Engineer, Green Valley Recording
-
         </p>
     </section>
-
-</main> <!--==== End of container ====-->
-
+</main>
+<!--==== End of container ====-->
 <!--==== Scripts ====-->
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/angular-route.min.js"></script>

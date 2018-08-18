@@ -1,4 +1,3 @@
-
 /***** The Page ****************/
 
 .clearfix:after {
@@ -6,53 +5,48 @@
     display: block;
     clear: both;
     visibility: hidden;
-    line-height: 0; height: 0;
+    line-height: 0;
+    height: 0;
 }
-
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
 }
-
-
-html, body{
+html,
+body {
     font-family: ‘Palatino Linotype’, Palatino, serif;
     height: 100%;
 }
-
 /***** The Header ****************/
 
-header, main{
+header,
+main {
     width: 90%;
     margin: 0 auto;
 }
-
-main{
+main {
     background-image: url("../img/bg4.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     /*background-color: #931100;*/
+
     padding: 10px;
-
 }
-
-
 .ev {
     vertical-align: top;
     width: 250px;
     margin-left: 35px;
 }
-h2{
+h2 {
     text-align: left;
     font-size: 2em;
     color: #931100;
     font-weight: lighter;
 }
-
-#official{
+#official {
     position: absolute;
     right: 0;
     top: 50px;
@@ -61,10 +55,9 @@ h2{
     margin-right: 20px;
     font-size: 1em;
 }
-
 /***** Navigation Bar ****************/
 
-nav{
+nav {
     font-size: 1.2em;
     font-family: Arial;
     border-top: 1px solid #dedede;
@@ -72,38 +65,32 @@ nav{
     overflow: hidden;
     width: 100%;
 }
-
-nav> ul> li{
+nav> ul> li {
     position: relative;
     list-style: none;
     float: left;
 }
-
-nav> ul> li:not(:last-of-type){
+nav> ul> li:not(:last-of-type) {
     border-right: solid 1px #cccccc;
 }
-
-nav> ul> li:not(:first-of-type)::after{
+nav> ul> li:not(:first-of-type)::after {
     content: "";
     display: block;
     position: absolute;
     top: 30px;
     left: -1px;
     width: 3px;
-
     background: #ffffff;
 }
-
-nav> ul> li> a{
+nav> ul> li> a {
     display: inline;
     padding: 25px;
     text-decoration: none;
     color: #171717;
 }
-
-
 /* Dropdown Content (Hidden by Default) */
-.dropdown{
+
+.dropdown {
     padding: 0 10px;
 }
 .dropdown-content {
@@ -114,15 +101,15 @@ nav> ul> li> a{
     font-size: .8em;
     background-color: white;
 }
-
 /* Links inside the dropdown */
+
 .dropdown-content a {
     color: black;
     text-decoration: none;
     display: block;
 }
-
 /* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -130,18 +117,16 @@ nav> ul> li> a{
     background: #931100;
     color: #dedcdf;
 }
-
-
 /***** Music ****************/
-#music{
+
+#music {
     text-align: center;
 }
-
-#music>iframe{
+#music>iframe {
     margin: 25px;
 }
-
 /***** Upcoming Shows ****************/
+
 .numberCircle {
     border-radius: 50%;
     width: 36px;
@@ -153,23 +138,18 @@ nav> ul> li> a{
     text-align: center;
     display: inline-block;
 }
-
-
-.showTitle{
+.showTitle {
     display: inline-block;
     vertical-align: top;
     position: relative;
     top: 11px;
     left: 10px;
 }
-
-
-section> ul> li{
+section> ul> li {
     list-style: none;
     padding-top: 5px;
 }
-
-#shows{
+#shows {
     position: relative;
     left: 0;
     width: 500px;
@@ -178,200 +158,166 @@ section> ul> li{
     display: inline-block;
     vertical-align: top;
 }
-
-.showList{
-    padding:0;
+.showList {
+    padding: 0;
 }
-
-
 /***** Map ****************/
 
 #map {
     width: 100%;
     height: 500px;
 }
-
-#allMap{
+#allMap {
     width: 700px;
     margin-bottom: 30px;
     display: inline-block;
     vertical-align: top;
-
 }
-
 /*****  Videos ****************/
 
-#videoOne{
+#videoOne {
     position: absolute;
-    top:550px;
-    left:70px;
-    width:565px;
-
+    top: 550px;
+    left: 70px;
+    width: 565px;
 }
-
-#videoTwo{
+#videoTwo {
     position: absolute;
-    top:550px;
-    right:77px;
-    width:565px;
-
+    top: 550px;
+    right: 77px;
+    width: 565px;
 }
-
-#mainVideos{
+#mainVideos {
     margin: 50px;
     height: 300px;
 }
-
-#mainVideos>iframe{
+#mainVideos>iframe {
     margin: 0 auto;
 }
-
-iframe{
+iframe {
     margin: 50px 150px;
-    width:640px;
-    height:360px;
+    width: 640px;
+    height: 360px;
 }
-
-.video{
+.video {
     text-align: center;
 }
-
-.videoHeader{
+.videoHeader {
     color: #931100;
     font-size: 2em;
 }
-
-.test .title{
+.test .title {
     color: white;
     margin-top: -19px;
     position: absolute;
     bottom: 0;
     white-space: nowrap;
 }
-
 /*****  Images ****************/
-.hide-bullets {
-    list-style:none;
-    margin-left: -40px;
-    margin-top:20px;
-}
 
+.hide-bullets {
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 20px;
+}
 .thumbnail {
     padding: 0;
 }
-
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
     width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
 }
-
-.test{
+.test {
     margin-top: 20px;
     position: relative;
-    height:125px;
+    height: 125px;
 }
-
-.test img{
-    height:100px;
-    width:100px;
+.test img {
+    height: 100px;
+    width: 100px;
     cursor: pointer;
 }
-
-.thumbWrapper{
+.thumbWrapper {
     position: absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    width:150px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 150px;
     overflow: scroll;
 }
-
-.preview{
+.preview {
     position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: 150px;
 }
-
-.viewImage{
+.viewImage {
     width: 500px;
     height: 500px;
     transform: translateX(-50%);
     left: 50%;
     position: absolute;
     top: 400px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-
-.modalize{
+.modalize {
     position: fixed;
     top: 0;
-    bottom:0;
-    right:0;
-    left:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, .75);
 }
-
-
-main.static{
+main.static {
     height: 500px;
     width: 1024px;
     overflow: hidden;
 }
-
-.link{
+.link {
     cursor: pointer;
 }
-
-.x{
+.x {
     position: fixed;
     top: 10px;
-    right:10px;
+    right: 10px;
     color: blue;
     z-index: 2;
     cursor: pointer;
-    padding:10px;
-
+    padding: 10px;
 }
-
-.bgX{
+.bgX {
     background: url(../img/x.svg);
     height: 20px;
     width: 20px;
     background-repeat: no-repeat;
-
 }
-
-svg .cls-1, svg .cls-2{
+svg .cls-1,
+svg .cls-2 {
     stroke: blue;
 }
-
-.hv:hover{
+.hv:hover {
     color: red;
-
 }
 /*****  Bio ****************/
 
-.bio{
-    width:425px;
+.bio {
+    width: 425px;
     float: right;
 }
-
-.bio>p{
+.bio>p {
     text-align: justify;
     color: #171717;
     line-height: 150%;
 }
-
-#bioPic{
+#bioPic {
     float: left;
     margin: 15px 5px;
 }
-
 /*****  Contact Page ****************/
 
-#contactHeader{
+#contactHeader {
     color: #931100;
     font-size: 1.5em;
     font-weight: lighter;
@@ -379,31 +325,28 @@ svg .cls-1, svg .cls-2{
     top: 125px;
     left: 255px;
 }
-
-#contact, form{
+#contact,
+form {
     margin: 0 auto;
     text-align: center;
     padding: 25px;
 }
-
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
     text-transform: uppercase;
 }
-
-
-form input[type=text], input[type=email], input[type=tel]{
+form input[type=text],
+input[type=email],
+input[type=tel] {
     width: 22%;
     height: 10px;
     margin: 27px;
     padding: 10px;
 }
-
-textarea{
+textarea {
     width: 76%;
     height: 200px;
 }
-
-#submit{
+#submit {
     width: 10%;
     height: 25px;
     position: absolute;
@@ -419,41 +362,31 @@ textarea{
     text-shadow: 1px 1px 1px #8b8b8b;
     text-align: center;
 }
-
-#submit:hover{
+#submit:hover {
     background-color: #000ed0;
     color: #ffffff;
     font-weight: bold;
 }
-
-#submit:active{
+#submit:active {
     background-color: #c9d026;
     color: #000;
 }
-
-#submit:focus{
+#submit:focus {
     background-color: #af0a00;
     color: #ffffff;
 }
-
-
 /***** Footer ****************/
 
-footer{
+footer {
     color: #931100;
-    font-family: 'open sans',arial,sans-serif;
+    font-family: 'open sans', arial, sans-serif;
     font-size: .8em;
     font-weight: 300;
     text-align: center;
     clear: both;
     margin: 25px;
 }
-
-footer> a{
+footer> a {
     display: inline;
     padding: 5px;
 }
-
-
-
-

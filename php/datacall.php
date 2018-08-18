@@ -5,14 +5,12 @@ header("Content-Type: application/json; charset=UTF-8");
 $user = 'root';
 $pass = 'root';
 
-$mysql=mysqli_init();
-if (!$mysql)
-{
+$mysql = mysqli_init();
+if (!$mysql) {
     die("mysqli_init failed");
 }
 
-if (!mysqli_real_connect($mysql,"localhost",$user,$pass,"EricValMusic"))
-{
+if (!mysqli_real_connect($mysql, "localhost", $user, $pass, "EricValMusic")) {
     die("Connect Error: " . mysqli_connect_error());
 }
 
@@ -24,45 +22,51 @@ if ($mysql->connect_errno) {
 
 //Need to select from both tables
 $result = $mysql->query("select * from images");
-$outp = "";
-while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
-    if ($outp != "") {$outp .= ",";}
-    $outp .= '{"fileName":"'  . $rs["fileName"] . '",';
-    $outp .= '"order":"'  . $rs["order"] . '"}';
+$outp   = "";
+while ($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+    if ($outp != "") {
+        $outp .= ",";
+    }
+    $outp .= '{"fileName":"' . $rs["fileName"] . '",';
+    $outp .= '"order":"' . $rs["order"] . '"}';
 }
 
-$outImages ='"image":['.$outp.']';
+$outImages = '"image":[' . $outp . ']';
 //echo($outp);
 
 //Need to select from both tables
 $result = $mysql->query("select * from videos");
-$outp = "";
-while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
-    if ($outp != "") {$outp .= ",";}
-    $outp .= '{"url":"'  . $rs["url"] . '",';
-    $outp .= '"title":"'  . $rs["title"] . '",';
-    $outp .= '"thumbnails":"'  . $rs["thumbnails"] . '"}';
+$outp   = "";
+while ($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+    if ($outp != "") {
+        $outp .= ",";
+    }
+    $outp .= '{"url":"' . $rs["url"] . '",';
+    $outp .= '"title":"' . $rs["title"] . '",';
+    $outp .= '"thumbnails":"' . $rs["thumbnails"] . '"}';
 }
 
-$outVideo ='"video":['.$outp.']';
+$outVideo = '"video":[' . $outp . ']';
 
 
 
 
 $result = $mysql->query("select * from map");
-$outp = "";
-while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
-    if ($outp != "") {$outp .= ",";}
-    $outp .= '{"lat":"'  . $rs["lat"] . '",';
-    $outp .= '"name":"'  . $rs["name"] . '",';
-    $outp .= '"address":"'  . $rs["address"] . '",';
-    $outp .= '"directions":"'  . $rs["directions"] . '",';
-    $outp .= '"site":"'  . $rs["site"] . '",';
-    $outp .= '"date":"'  . $rs["date"] . '",';
-    $outp .= '"long":"'  . $rs["long"] . '"}';
+$outp   = "";
+while ($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+    if ($outp != "") {
+        $outp .= ",";
+    }
+    $outp .= '{"lat":"' . $rs["lat"] . '",';
+    $outp .= '"name":"' . $rs["name"] . '",';
+    $outp .= '"address":"' . $rs["address"] . '",';
+    $outp .= '"directions":"' . $rs["directions"] . '",';
+    $outp .= '"site":"' . $rs["site"] . '",';
+    $outp .= '"date":"' . $rs["date"] . '",';
+    $outp .= '"long":"' . $rs["long"] . '"}';
 }
 
-$outMap ='"map":['.$outp.']';
-$outp ='{"result": {'.$outVideo.', '.$outImages.', '.$outMap.'}}';
-echo($outp);
+$outMap = '"map":[' . $outp . ']';
+$outp   = '{"result": {' . $outVideo . ', ' . $outImages . ', ' . $outMap . '}}';
+echo ($outp);
 ?>

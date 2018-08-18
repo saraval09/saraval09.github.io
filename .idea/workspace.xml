@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abb3e2b1-dc94-4824-97e8-7d29fdedf6c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/password_encryption.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Archive.zip" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/video_1.jpg" afterPath="$PROJECT_DIR$/img/video_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/video_2.jpg" afterPath="$PROJECT_DIR$/img/video_2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/video_4.jpg" afterPath="$PROJECT_DIR$/img/video_4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/video_5.jpg" afterPath="$PROJECT_DIR$/img/video_5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/video_6.jpg" afterPath="$PROJECT_DIR$/img/video_6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/contact.html" afterPath="$PROJECT_DIR$/partials/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/home.html" afterPath="$PROJECT_DIR$/partials/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/datacall.php" afterPath="$PROJECT_DIR$/php/datacall.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/email.php" afterPath="$PROJECT_DIR$/php/email.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/footer.html" afterPath="$PROJECT_DIR$/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/header.html" afterPath="$PROJECT_DIR$/templates/header.html" />
-    </list>
+    <list default="true" id="abb3e2b1-dc94-4824-97e8-7d29fdedf6c7" name="Default" comment="" />
     <ignored path="saraval09.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -56,7 +35,7 @@
       <file leaf-file-name="datacall.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/datacall.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8005319">
+            <state vertical-scroll-proportion="1.2367021">
               <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
               <folding>
                 <marker date="1479341887000" expanded="true" signature="534:554" placeholder="select * fro... images" />
@@ -91,8 +70,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="28" />
-    <option name="y" value="46" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
@@ -221,7 +199,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="28" y="46" width="1440" height="873" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -324,7 +302,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/datacall.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8005319">
+        <state vertical-scroll-proportion="1.2367021">
           <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
           <folding>
             <marker date="1479341887000" expanded="true" signature="534:554" placeholder="select * fro... images" />
